@@ -3809,18 +3809,18 @@
                                         <div class="menu-content d-flex align-items-center px-3">
                                             <!--begin::Avatar-->
                                             <div class="symbol symbol-50px me-5">
-                                                <img alt="Logo"
-                                                    src="{{ asset('adminassets/media/avatars/300-1.jpg') }}" />
+                                                <img class="img-profile rounded-circle"
+                                            src="https://ui-avatars.com/api/?name={{ Auth::user()->name }}">
                                             </div>
                                             <!--end::Avatar-->
                                             <!--begin::Username-->
                                             <div class="d-flex flex-column">
-                                                <div class="fw-bold d-flex align-items-center fs-5">Max Smith
+                                                <div class="fw-bold d-flex align-items-center fs-5">{{ Auth::user()->name }}
                                                     <span
                                                         class="badge badge-light-success fw-bold fs-8 px-2 py-1 ms-2">Pro</span>
                                                 </div>
                                                 <a href="#"
-                                                    class="fw-semibold text-muted text-hover-primary fs-7">max@kt.com</a>
+                                                    class="fw-semibold text-muted text-hover-primary fs-7">{{ Auth::user()->email }}
                                             </div>
                                             <!--end::Username-->
                                         </div>

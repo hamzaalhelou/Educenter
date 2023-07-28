@@ -12,7 +12,7 @@
         {{ session('msg') }}
     </div>
 @endif
-
+<hr>
 <table class="table table-bordered m-2 ">
     <tr class="table-primary">
         <th>ID</th>
