@@ -54,8 +54,7 @@ class TeacherController extends Controller
             'ln_link' => $request->ln_link
         ]);
         return redirect()
-        ->route('admin.teacher.index')
-        ->with('msg', 'teachers added successfully')
+        ->with('msg',__('admin.teachers added successfully'))
         ->with('type', 'success');
     }
 
@@ -118,7 +117,7 @@ class TeacherController extends Controller
 
         return redirect()
         ->route('admin.teacher.index')
-        ->with('msg', 'teacher updated successfully')
+        ->with('msg',__('admin.teacher updated successfully'))
         ->with('type', 'info');
     }
 
@@ -131,7 +130,7 @@ class TeacherController extends Controller
 
         return redirect()
         ->route('admin.teacher.index')
-        ->with('msg', 'teacher deleted successfully')
+        ->with('msg',__('admin.teacher deleted successfully'))
         ->with('type', 'danger');
     }
 }

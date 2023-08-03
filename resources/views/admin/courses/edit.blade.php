@@ -1,23 +1,24 @@
 @extends('admin.app')
 
-@section('title', 'Dahsboard')
-@section('titlegage','Courses')
+@section('title',__('admin.Dashboards'))
+@section('titlegage',__('admin.Courses'))
 @section('content')
-<div class="text-right mb-4 m-7">
-<a class="btn btn-primary float-end" href="{{ route('admin.courses.index') }}">All Courses</a>
+<div class="d-flex justify-content-between align-items-center  mb-4">
+    <h1 class="h3 text-gray-800 mb-0 ms-9">{{ __('admin.Edit Course') }}</h1>
+<a class="btn btn-primary me-17" href="{{ route('admin.courses.index') }}">{{ __('admin.All Courses') }}</a>
 </div>
 <form action="{{ route('admin.courses.update', $course->id) }}" method="POST" enctype="multipart/form-data">
 @csrf
 @method('put')
 <hr>
 <div class="row align-items-center mb-3 m-8">
-    <label class="col-md-1 mb-0 required"><b>ID</b></label>
+    <label class="col-md-1 mb-0 required"><b>{{ __('admin.ID') }}</b></label>
     <div class="col-md-6 ms-20" >
         <input type="text" class="form-control" disabled value="{{$course->id}}" name="id">
     </div>
     </div>
 <div class="row align-items-center mb-3 m-8">
-    <label class="col-md-1 mb-0 required"><b>Data</b></label>
+    <label class="col-md-1 mb-0 required"><b>{{ __('admin.Date') }}</b></label>
     <div class="col-md-6 ms-20" >
         <input type="date" class="form-control @error('date') is-invalid @enderror" value="{{$course->date}}" name="date">
         @error('date')
@@ -27,7 +28,7 @@
     </div>
 
 <div class="row align-items-center mb-3 m-8">
-    <label class="col-md-1 mb-0 required "><b>Title</b></label>
+    <label class="col-md-1 mb-0 required "><b>{{ __('admin.Title') }}</b></label>
     <div class="col-md-6 ms-20" >
         <input type="text" placeholder="Title" class="form-control  @error('title') is-invalid @enderror" value="{{$course->title}}" name="title">
         @error('title')
@@ -37,7 +38,7 @@
     </div>
 
 <div class="row align-items-bottom mb-3 m-8">
-    <label class="col-md-1 mb-0 required "><b>Image</b></label>
+    <label class="col-md-1 mb-0 required "><b>{{ __('admin.Image') }}</b></label>
     <div class="col-md-6 ms-20" >
         <input type="file" class="form-control  @error('image') is-invalid @enderror" name="image">
         @error('image')
@@ -48,7 +49,7 @@
     </div>
 
 <div class="row align-items-center mb-3 m-8">
-    <label class="col-md-1 mb-0 required"><b>Category</b></label>
+    <label class="col-md-1 mb-0 required"><b>{{ __('admin.Category') }}</b></label>
     <div class="col-md-6 ms-20" >
         <input type="text" placeholder="Category" class="form-control @error('category') is-invalid @enderror" value="{{$course->category}}"  name="category">
         @error('category')
@@ -58,7 +59,7 @@
     </div>
 
 <div class="row align-items-center mb-3 m-8">
-    <label class="col-md-1 mb-0 required"><b>field</b></label>
+    <label class="col-md-1 mb-0 required"><b>{{ __('admin.field') }}</b></label>
     <div class="col-md-6 ms-20" >
         <input type="text" placeholder="field" class="form-control @error('field') is-invalid @enderror" value="{{$course->field}}" name="field">
         @error('field')
@@ -68,7 +69,7 @@
     </div>
 
 <div class="row align-items-center mb-3 m-8">
-    <label class="col-md-1 mb-0 required"><b>Price</b></label>
+    <label class="col-md-1 mb-0 required"><b>{{ __('admin.Price') }}</b></label>
     <div class="col-md-6 ms-20" >
         <input type="number" placeholder="Price" class="form-control @error('price') is-invalid @enderror" value="{{$course->price}}" name="price">
         @error('price')
@@ -78,7 +79,7 @@
     </div>
 
 <div class="row align-items-center mb-3 m-8">
-    <label class="col-md-1 mb-0 required"><b>Duration</b></label>
+    <label class="col-md-1 mb-0 required"><b>{{ __('admin.Duration') }}</b></label>
     <div class="col-md-6 ms-20" >
         <input type="text" placeholder="Duration"  class="form-control @error('duration') is-invalid @enderror" value="{{$course->duration}}" name="duration">
      @error('duration')
@@ -89,7 +90,7 @@
 </div>
 
 <div class="row align-items-center mb-3 m-8">
-    <label class="col-md-1 mb-0 required" ><b>Content</b></label>
+    <label class="col-md-1 mb-0 required" ><b>{{ __('admin.Content') }}</b></label>
     <div class="col-md-6 ms-20" >
         <textarea placeholder="Content" class="form-control @error('content') is-invalid @enderror"name="content" rows="5">{{ $course->content }}</textarea>
         @error('content')
@@ -99,7 +100,7 @@
 
 </div>
 <div class="row align-items-center mb-3 m-8">
-    <label class="col-md-1 mb-0 required"><b>Teacher</b></label>
+    <label class="col-md-1 mb-0 required"><b>{{ __('admin.Teacher') }}</b></label>
     <div class="col-md-6 ms-20">
         <select class="form-control" name="teacher_id">
             @foreach ($teachers as $item)
@@ -110,8 +111,8 @@
 </div>
 <hr class="mt-10">
 <div class="card-footer d-flex justify-content-end py-6 px-9 m-5">
-    <button type="button" onclick="history.back()" class="btn btn-secondary"> <i class="fas fa-ban "></i> Cancel</button>
-    <button class="btn btn-success ms-3"> <i class="fas fa-save"></i> Save</button>
+    <button type="button" onclick="history.back()" class="btn btn-secondary"> <i class="fas fa-ban "></i>{{ __('admin.Cancel') }}</button>
+    <button class="btn btn-success ms-3"> <i class="fas fa-save"></i>{{ __('admin.Save') }}</button>
 </div>
 
 </form>

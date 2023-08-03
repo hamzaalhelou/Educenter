@@ -49,7 +49,7 @@ class SliderController extends Controller
         ]);
         return redirect()
         ->route('admin.sliders.index')
-        ->with('msg', 'slider added successfully')
+        ->with('msg',__('admin.slider added successfully'))
         ->with('type', 'success');
     }
 
@@ -105,7 +105,7 @@ class SliderController extends Controller
 
         return redirect()
         ->route('admin.sliders.index')
-        ->with('msg', 'Slider updated successfully')
+        ->with('msg',__('admin.Slider updated successfully'))
         ->with('type', 'info');
     }
 
@@ -118,7 +118,7 @@ class SliderController extends Controller
 
         return redirect()
         ->route('admin.sliders.index')
-        ->with('msg', 'Slider deleted successfully')
+        ->with('msg',__('admin.Slider deleted successfully'))
         ->with('type', 'danger');
     }
 }

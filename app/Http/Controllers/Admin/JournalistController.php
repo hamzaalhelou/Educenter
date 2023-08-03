@@ -47,7 +47,7 @@ class JournalistController extends Controller
         ]);
         return redirect()
         ->route('admin.journalists.index')
-        ->with('msg', 'Journalist added successfully')
+        ->with('msg',__('admin.Journalist added successfully'))
         ->with('type', 'success');
 
     }
@@ -97,7 +97,7 @@ class JournalistController extends Controller
 
         return redirect()
         ->route('admin.journalists.index')
-        ->with('msg', 'Journalist updated successfully')
+        ->with('msg',__('admin.Journalist updated successfully'))
         ->with('type', 'info');
     }
 
@@ -110,7 +110,7 @@ class JournalistController extends Controller
 
         return redirect()
         ->route('admin.journalists.index')
-        ->with('msg', 'Journalist deleted successfully')
+        ->with('msg',__('admin.Journalist deleted successfully'))
         ->with('type', 'danger');
     }
 }

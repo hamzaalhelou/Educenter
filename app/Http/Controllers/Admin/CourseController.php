@@ -85,7 +85,7 @@ class CourseController extends Controller
 
         return redirect()
         ->route('admin.courses.index')
-        ->with('msg', 'Course added successfully')
+        ->with('msg', __('admin.Course added successfully'))
         ->with('type', 'success');
     }
 
@@ -150,7 +150,7 @@ class CourseController extends Controller
 
         return redirect()
         ->route('admin.courses.index')
-        ->with('msg', 'Course updated successfully')
+        ->with('msg', __('admin.Course updated successfully'))
         ->with('type', 'info');
     }
 
@@ -163,7 +163,7 @@ class CourseController extends Controller
 
         return redirect()
         ->route('admin.courses.index')
-        ->with('msg', 'course deleted successfully')
+        ->with('msg',__('admin.course deleted successfully'))
         ->with('type', 'danger');
     }
 }

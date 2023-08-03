@@ -1,10 +1,11 @@
 @extends('admin.app')
 
-@section('title','Dashboard')
-@section('titlegage','Courses')
+@section('title',__('admin.Dashboards'))
+@section('titlegage',__('admin.Courses'))
 @section('content')
-<div class="text-right mb-4 m-4">
-    <a class="btn btn-primary float-end " href="{{route('admin.courses.create')}}">Add New Course</a>
+<div class="d-flex justify-content-between align-items-center  mb-4">
+    <h1 class="h3 text-gray-800 mb-0 ms-9">{{ __('admin.Courses') }}</h1>
+    <a class="btn btn-primary me-17" href="{{route('admin.courses.create')}}">{{ __('admin.Add New Course') }}</a>
 </div>
 @if (session('msg'))
     <div class="alert alert-{{ session('type') }}">
@@ -14,17 +15,17 @@
 <hr>
 <table class="table table-bordered m-2">
     <tr class="table-primary">
-        <th>ID</th>
-        <th>Date</th>
-        <th>Title</th>
-        <th>Image</th>
-        <th>Category</th>
-        <th>field</th>
-        <th>Price</th>
-        <th>Duration</th>
-        <th>Content</th>
-        <th>Teacher</th>
-        <th>Actions</th>
+        <th>{{ __('admin.ID') }}</th>
+        <th>{{ __('admin.Date') }}</th>
+        <th>{{ __('admin.Title') }}</th>
+        <th>{{ __('admin.Image') }}</th>
+        <th>{{ __('admin.Category') }}</th>
+        <th>{{ __('admin.field') }}</th>
+        <th>{{ __('admin.Price') }}</th>
+        <th>{{ __('admin.Duration') }}</th>
+        <th>{{ __('admin.Content') }}</th>
+        <th>{{ __('admin.Teacher') }}</th>
+        <th>{{ __('admin.Actions') }}</th>
     </tr>
     @foreach ($courses as $course)
     <tr>
@@ -43,7 +44,7 @@
             <form class="d-inline" method="POST" action="{{ route('admin.courses.destroy',$course->id) }}">
             @csrf
            @method('delete')
-           <button onclick="return confirm('Are you sure?!')" class="btn btn-danger btn-sm m-2"><i class="fas fa-trash"></i> </button>
+           <button onclick="return confirm('{{ __('admin.Are you sure?!') }}')" class="btn btn-danger btn-sm m-2"><i class="fas fa-trash"></i> </button>
           </form>
         </td>
     </tr>

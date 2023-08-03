@@ -1,10 +1,11 @@
 @extends('admin.app')
 
-@section('title', 'Dahsboard')
-@section('titlegage','Teachers')
+@section('title',__('admin.Dashboards'))
+@section('titlegage',__('admin.Teachers'))
 @section('content')
-<div class="text-right mb-4 m-4">
-    <a class="btn btn-primary float-end" href="{{ route('admin.teacher.create') }}">Add New Teacher</a>
+<div class="d-flex justify-content-between align-items-center  mb-4">
+    <h1 class="h3 text-gray-800 mb-0 ms-9">{{ __('admin.Teachers') }}</h1>
+    <a class="btn btn-primary me-17" href="{{ route('admin.teacher.create') }}">{{ __('admin.Add New Teacher') }}</a>
 </div>
 
 @if (session('msg'))
@@ -15,15 +16,15 @@
 <hr>
 <table class="table table-bordered m-2">
     <tr class="table-primary">
-        <th>ID</th>
-        <th>Name</th>
-        <th>Image</th>
-        <th>Position</th>
-        <th>Link Facebook</th>
-        <th>Link Instagram</th>
-        <th>Link Linkedln</th>
-        <th>Link Gamil</th>
-        <th>Actions</th>
+        <th>{{ __('admin.ID') }}</th>
+        <th>{{ __('admin.Name') }}</th>
+        <th>{{ __('admin.Image') }}</th>
+        <th>{{ __('admin.Position') }}</th>
+        <th>{{ __('admin.Link Facebook') }}</th>
+        <th>{{ __('admin.Link Instagram') }}</th>
+        <th>{{ __('admin.Link Linkedln') }}</th>
+        <th>{{ __('admin.Link Gamil') }}</th>
+        <th>{{ __('admin.Actions') }}</th>
     </tr>
     @foreach ($teachers as $teacher)
         <tr>
@@ -40,7 +41,7 @@
                 <form class="d-inline" method="POST" action="{{ route('admin.teacher.destroy', $teacher->id) }}">
                     @csrf
                     @method('delete')
-                    <button onclick="return confirm('Are you sure?!')" class="btn btn-danger btn-sm m-2"><i class="fas fa-trash"></i></button>
+                    <button onclick="return confirm({{ __('admin.Are you sure?!') }})" class="btn btn-danger btn-sm m-2"><i class="fas fa-trash"></i></button>
                 </form>
             </td>
         </tr>

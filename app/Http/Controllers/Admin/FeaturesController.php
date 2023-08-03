@@ -45,7 +45,7 @@ class FeaturesController extends Controller
         ]);
         return redirect()
         ->route('admin.features.index')
-        ->with('msg', 'feature added successfully')
+        ->with('msg',__('admin.feature added successfully'))
         ->with('type', 'success');
     }
 
@@ -93,7 +93,7 @@ class FeaturesController extends Controller
 
         return redirect()
         ->route('admin.features.index')
-        ->with('msg', 'feature updated successfully')
+        ->with('msg',__('admin.feature updated successfully'))
         ->with('type', 'info');
     }
 
@@ -107,7 +107,7 @@ class FeaturesController extends Controller
 
         return redirect()
         ->route('admin.features.index')
-        ->with('msg', 'feature deleted successfully')
+        ->with('msg',__('admin.feature deleted successfully'))
         ->with('type', 'danger');
     }
 }

@@ -1,11 +1,12 @@
 @extends('admin.app')
 
-@section('title', 'Dahsboard')
-@section('titlegage','Journalist')
+@section('title',__('admin.Dashboards'))
+@section('titlegage',__('admin.Journalists'))
 @section('content')
-    <div class="text-right mb-4 m-4">
-        <a class="btn btn-primary float-end" href="{{ route('admin.journalists.create') }}">Add New Journalist</a>
-    </div>
+<div class="d-flex justify-content-between align-items-center  mb-4">
+    <h1 class="h3 text-gray-800 mb-0 ms-9">{{ __('admin.Journalists') }}</h1>
+        <a class="btn btn-primary me-17" href="{{ route('admin.journalists.create') }}">{{ __('admin.Add New Journalist') }}</a>
+</div>
 @if (session('msg'))
     <div class="alert alert-{{ session('type') }}">
         {{ session('msg') }}
@@ -14,12 +15,12 @@
 <hr>
 <table class="table table-bordered m-2">
     <tr class="table-primary ">
-        <th>ID</th>
-        <th>Date</th>
-        <th>Writer</th>
-        <th>Title</th>
-        <th>Content</th>
-        <th>Actions</th>
+        <th>{{ __('admin.ID') }}</th>
+        <th>{{ __('admin.Date') }}</th>
+        <th>{{ __('admin.Writer') }}</th>
+        <th>{{ __('admin.Title') }}</th>
+        <th>{{ __('admin.Content') }}</th>
+        <th>{{ __('admin.Actions') }}</th>
     </tr>
     @foreach ($journalists as $journalist)
         <tr>
@@ -33,7 +34,7 @@
                 <form class="d-inline" method="POST" action="{{ route('admin.journalists.destroy', $journalist->id) }}">
                     @csrf
                     @method('delete')
-                    <button onclick="return confirm('Are you sure?!')" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
+                    <button onclick="return confirm('{{ __('admin.Are you sure?!') }}')" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
                 </form>
             </td>
         </tr>
