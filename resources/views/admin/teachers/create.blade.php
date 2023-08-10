@@ -13,7 +13,7 @@
 <div class="row align-items-center mb-3 m-8">
     <label class="col-md-1 mb-0 required"><b>{{ __('admin.Name') }}</b></label>
     <div class="col-md-6 ms-20" >
-        <input type="text" placeholder="Name" class="form-control @error('name') is-invalid @enderror" name="name">
+        <input type="text" placeholder="{{ __('admin.Name') }}" class="form-control @error('name') is-invalid @enderror" name="name">
         @error('name')
         <small class="invalid-feedback">{{ $message }}</small>
         @enderror
@@ -32,7 +32,7 @@
 <div class="row align-items-center mb-3 m-8">
     <label class="col-md-1 mb-0 required"><b>{{ __('admin.Position') }}</b></label>
     <div class="col-md-6 ms-20" >
-        <input type="text" placeholder="Position" class="form-control @error('position') is-invalid @enderror" name="position">
+        <input type="text" placeholder="{{ __('admin.Position') }}" class="form-control @error('position') is-invalid @enderror" name="position">
         @error('position')
         <small class="invalid-feedback">{{ $message }}</small>
         @enderror
@@ -41,7 +41,7 @@
 <div class="row align-items-center mb-3 m-8">
     <label class="col-md-1 mb-0 required"><b>{{ __('admin.Link Facebook') }}</b></label>
     <div class="col-md-6 ms-20" >
-        <input type="url" placeholder="Link Facebook" class="form-control @error('fb_link') is-invalid @enderror" name="fb_link">
+        <input type="url" placeholder="{{ __('admin.Link Facebook') }}" class="form-control @error('fb_link') is-invalid @enderror" name="fb_link">
         @error('fb_link')
         <small class="invalid-feedback">{{ $message }}</small>
         @enderror
@@ -50,7 +50,7 @@
 <div class="row align-items-center mb-3 m-8">
 <label class="col-md-1 mb-0 required"><b>{{ __('admin.Link Instagram') }}</b></label>
 <div class="col-md-6 ms-20" >
-    <input type="url" placeholder="Link Instagram" class="form-control @error('in_link') is-invalid @enderror" name="in_link">
+    <input type="url" placeholder="{{ __('admin.Link Instagram') }}" class="form-control @error('in_link') is-invalid @enderror" name="in_link">
     @error('in_link')
     <small class="invalid-feedback">{{ $message }}</small>
      @enderror
@@ -59,7 +59,7 @@
 <div class="row align-items-center mb-3 m-8">
     <label class="col-md-1 mb-0 required"><b>{{ __('admin.Link Linkedln') }}</b></label>
     <div class="col-md-6 ms-20" >
-        <input type="url" placeholder="Link Linkedln" class="form-control @error('ln_link') is-invalid @enderror" name="ln_link">
+        <input type="url" placeholder="{{ __('admin.Link Linkedln') }}" class="form-control @error('ln_link') is-invalid @enderror" name="ln_link">
         @error('ln_link')
        <small class="invalid-feedback">{{ $message }}</small>
         @enderror
@@ -68,7 +68,7 @@
 <div class="row align-items-center mb-3 m-8">
     <label class="col-md-1 mb-0 required"><b>{{ __('admin.Link Gamil') }}</b></label>
     <div class="col-md-6 ms-20" >
-        <input type="url" placeholder="Link Gamil" class="form-control @error('gm_link') is-invalid @enderror" name="gm_link">
+        <input type="url" placeholder="{{ __('admin.Link Gamil') }}" class="form-control @error('gm_link') is-invalid @enderror" name="gm_link">
         @error('gm_link')
         <small class="invalid-feedback">{{ $message }}</small>
          @enderror

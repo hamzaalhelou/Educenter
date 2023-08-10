@@ -80,4 +80,17 @@ return[
   'My Profile'=>'الملف الشخصي',
   'Sign Out'=>'تسجيل خروج',
   'Phone'=>'الهاتف',
+  'Researchs'=>'الابحاث',
+  'Add New Research'=>'اضافة بحث',
+  'All Researchs'=>'جميع الابحاث',
+  'Edit Research'=>'تعديل بحث',
+  'research deleted successfully'=>'تم حذف البحث بنجاح',
+  'research updated successfully'=>'تم تعديل البحث بنجاح',
+  'research added successfully'=>'تم اضافة البحث بنجاح',
+
+
+
+
+
+
 ];

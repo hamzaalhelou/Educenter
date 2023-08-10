@@ -80,5 +80,15 @@ return[
   'My Profile' =>'My Profile',
   'Sign Out'=>'Sign Out',
   'Phone'=>'Phone',
+  'Researchs'=>'Researchs',
+  'All Researchs'=>'All Researchs',
+  'Add New Research'=>'Add New Research',
+  'All Researchs'=>'All Researchs',
+  'Edit Research'=>'Edit Research',
+  'research deleted successfully'=>'research deleted successfully',
+  'research updated successfully'=>'research updated successfully',
+  'research added successfully'=>'research added successfully',
+
+
 
 ];

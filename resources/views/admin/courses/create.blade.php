@@ -22,7 +22,7 @@
     <div class="row align-items-center mb-3 m-8">
         <label class="col-md-1 mb-0 required"><b>{{ __('admin.Title') }}</b></label>
         <div class="col-md-6 ms-20" >
-        <input type="text" placeholder="Title" class="form-control @error('title') is-invalid @enderror" name="title">
+        <input type="text" placeholder="{{ __('admin.Title') }}" class="form-control @error('title') is-invalid @enderror" name="title">
          @error('title')
         <small class="invalid-feedback">{{ $message }}</small>
         @enderror
@@ -40,7 +40,7 @@
      <div class="row align-items-center mb-3 m-8">
                 <label class="col-md-1 mb-0 required"><b>{{ __('admin.Category') }}</b></label>
                 <div class="col-md-6 ms-20" >
-                    <input type="text" placeholder="Category" class="form-control @error('category') is-invalid @enderror" name="category">
+                    <input type="text" placeholder="{{ __('admin.Category') }}" class="form-control @error('category') is-invalid @enderror" name="category">
                     @error('category')
                     <small class="invalid-feedback">{{ $message }}</small>
                     @enderror
@@ -49,7 +49,7 @@
     <div class="row align-items-center mb-3 m-8">
                     <label class="col-md-1 mb-0 required"><b>{{ __('admin.field') }}</b></label>
                     <div class="col-md-6 ms-20" >
-                        <input type="text" placeholder="field" class="form-control @error('field') is-invalid @enderror" name="field">
+                        <input type="text" placeholder="{{ __('admin.field') }}" class="form-control @error('field') is-invalid @enderror" name="field">
                         @error('field')
                         <small class="invalid-feedback">{{ $message }}</small>
                         @enderror
@@ -58,7 +58,7 @@
     <div class="row align-items-center mb-3 m-8">
                         <label class="col-md-1 mb-0 required"><b>{{ __('admin.Price') }}</b></label>
                         <div class="col-md-6 ms-20" >
-                            <input type="number" placeholder="Price" class="form-control @error('price') is-invalid @enderror" name="price">
+                            <input type="number" placeholder="{{ __('admin.Price') }}" class="form-control @error('price') is-invalid @enderror" name="price">
                             @error('price')
                            <small class="invalid-feedback">{{ $message }}</small>
                             @enderror
@@ -67,7 +67,7 @@
     <div class="row align-items-center mb-3 m-8">
                             <label class="col-md-1 mb-0 required"><b>{{ __('admin.Duration') }}</b></label>
                             <div class="col-md-6 ms-20" >
-                                <input type="text" placeholder="Duration" class="form-control @error('duration') is-invalid @enderror" name="duration">
+                                <input type="text" placeholder="{{ __('admin.Duration') }}" class="form-control @error('duration') is-invalid @enderror" name="duration">
                                 @error('duration')
                                 <small class="invalid-feedback">{{ $message }}</small>
                                  @enderror
@@ -76,7 +76,7 @@
     <div class="row align-items-center mb-3 m-8">
         <label class="col-md-1 mb-0 required" ><b>{{ __('admin.Content') }}</b></label>
         <div class="col-md-6 ms-20" >
-            <textarea placeholder="Content" class="form-control @error('content') is-invalid @enderror" name="content" rows="5"></textarea>
+            <textarea placeholder="{{ __('admin.Content') }}" class="form-control @error('content') is-invalid @enderror" name="content" rows="5"></textarea>
             @error('content')
             <small class="invalid-feedback">{{ $message }}</small>
              @enderror

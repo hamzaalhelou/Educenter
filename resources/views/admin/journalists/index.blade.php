@@ -17,6 +17,7 @@
     <tr class="table-primary ">
         <th>{{ __('admin.ID') }}</th>
         <th>{{ __('admin.Date') }}</th>
+        <th>{{ __('admin.Image') }}</th>
         <th>{{ __('admin.Writer') }}</th>
         <th>{{ __('admin.Title') }}</th>
         <th>{{ __('admin.Content') }}</th>
@@ -26,6 +27,7 @@
         <tr>
             <td>{{ $journalist->id }}</td>
             <td>{{ $journalist->date }}</td>
+            <td><img width="100" src="{{ asset('uploads/images/'.$journalist->image) }}" alt=""></td>
             <td>{{ $journalist->writer }}</td>
             <td>{{ $journalist->title }}</td>
             <td>{{ $journalist->content }}</td>

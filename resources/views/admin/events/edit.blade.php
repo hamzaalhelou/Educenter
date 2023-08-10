@@ -14,7 +14,7 @@
 <div class="row align-items-center mb-3 m-8">
     <label class="col-md-1 mb-0 required"><b>{{ __('admin.Date') }}</b></label>
     <div class="col-md-6 ms-20" >
-        <input type="text" placeholder="{{ __('admin.Date') }}" class="form-control @error('date') is-invalid @enderror" value="{{$event->date}}" name="date">
+        <input type="text" class="form-control @error('date') is-invalid @enderror" value="{{$event->date}}" name="date">
         @error('date')
         <small class="invalid-feedback">{{ $message }}</small>
         @enderror

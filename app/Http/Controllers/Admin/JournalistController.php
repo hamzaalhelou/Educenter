@@ -32,14 +32,18 @@ class JournalistController extends Controller
     {
         $request->validate([
             'date' => 'required',
+            'image' => 'nullable|mimes:png,jpg,jpeg',
             'writer' => 'required',
             'title' => 'required',
             'content' => 'required'
 
         ]);
+        $journalistimage = rand().time().$request->file('image')->getClientOriginalName();
+        $request->file('image')->move(public_path('uploads/images'), $journalistimage);
 
         Journalist::create([
             'date' => $request->date,
+            'image' => $journalistimage,
             'writer' => $request->writer,
             'title' => $request->title,
             'content' => $request->content
@@ -77,18 +81,26 @@ class JournalistController extends Controller
     {
         $request->validate([
             'date' => 'required',
+            'image' => 'nullable|mimes:png,jpg,jpeg',
             'writer' => 'required',
             'title' => 'required',
             'content' => 'required'
         ]);
 
         $journalist = Journalist::findOrFail($id);
+        $journalistimage = $journalist->image;
+        if($request->hasFile('image')) {
 
+            $journalistimage = rand().time().$request->file('image')->getClientOriginalName();
+            $request->file('image')->move(public_path('uploads/images'), $journalistimage);
+
+        }
 
 
 
         $journalist->update([
             'date' => $request->date,
+            'image' => $journalistimage,
             'writer' => $request->writer,
             'title' => $request->title,
             'content' => $request->content

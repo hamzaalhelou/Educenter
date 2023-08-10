@@ -74,7 +74,7 @@
     <div class="row align-items-center mb-3 m-8">
         <label class="col-md-1 mb-0 required"><b>{{ __('admin.Phone') }}</b></label>
         <div class="col-md-6 ms-20" >
-            <input type="number" placeholder="Phone" class="form-control @error('phone') is-invalid @enderror" value="{{ settings('phone') }}" name="phone">
+            <input type="tel" placeholder="Phone" class="form-control @error('phone') is-invalid @enderror" value="{{ settings('phone') }}" name="phone">
             @error('phone')
             <small class="invalid-feedback">{{ $message }}</small>
             @enderror

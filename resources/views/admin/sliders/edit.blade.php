@@ -14,7 +14,7 @@
 <div class="row align-items-center mb-3 m-8">
     <label class="col-md-1 mb-0 required "><b>{{ __('admin.Title') }}</b></label>
     <div class="col-md-6 ms-20" >
-        <input type="text" placeholder="Title" class="form-control @error('title') is-invalid @enderror" value="{{$slider->title}}" name="title">
+        <input type="text" placeholder="{{ __('admin.Title') }}" class="form-control @error('title') is-invalid @enderror" value="{{$slider->title}}" name="title">
         @error('title')
             <small class="invalid-feedback">{{ $message }}</small>
         @enderror
@@ -24,7 +24,7 @@
     <div class="row align-items-center mb-3 m-8">
         <label class="col-md-1 mb-0 required" ><b>{{ __('admin.Content') }}</b></label>
         <div class="col-md-6 ms-20" >
-            <textarea placeholder="Content" class="form-control @error('content') is-invalid @enderror"name="content" rows="5">{{ $slider->content }}</textarea>
+            <textarea placeholder="{{ __('admin.Content') }}" class="form-control @error('content') is-invalid @enderror"name="content" rows="5">{{ $slider->content }}</textarea>
             @error('content')
             <small class="invalid-feedback">{{ $message }}</small>
              @enderror
@@ -44,7 +44,7 @@
 <div class="row align-items-center mb-3 m-8">
     <label class="col-md-1 mb-0 required "><b>{{ __('admin.Apply New') }}</b></label>
     <div class="col-md-6 ms-20" >
-        <input type="text" placeholder="Apply New" class="form-control @error('btn1_link') is-invalid @enderror" value="{{ $slider->btn1_link }}" name="btn1_link">
+        <input type="text" placeholder="{{ __('admin.Apply New') }}" class="form-control @error('btn1_link') is-invalid @enderror" value="{{ $slider->btn1_link }}" name="btn1_link">
         @error('btn1_link')
         <small class="invalid-feedback">{{ $message }}</small>
     @enderror

@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
-
 use App\Http\Controllers\Controller;
 use App\Models\Teacher;
 use Illuminate\Http\Request;
@@ -54,6 +53,7 @@ class TeacherController extends Controller
             'ln_link' => $request->ln_link
         ]);
         return redirect()
+        ->route('admin.teacher.index')
         ->with('msg',__('admin.teachers added successfully'))
         ->with('type', 'success');
     }

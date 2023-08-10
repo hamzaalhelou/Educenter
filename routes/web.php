@@ -9,6 +9,8 @@ use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\TeacherController;
 use App\Http\Controllers\Admin\FeaturesController;
 use App\Http\Controllers\Admin\JournalistController;
+use App\Http\Controllers\Admin\ResearchController;
+use App\Http\Controllers\SiteController;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 Route::prefix(LaravelLocalization::setLocale())->group(function(){
@@ -23,8 +25,16 @@ Route::prefix(LaravelLocalization::setLocale())->group(function(){
     Route::resource('courses',CourseController::class);
     Route::resource('teacher',TeacherController::class);
     Route::resource('events',EventController::class);
-    Route::resource('journalists',JournalistController::class);});
-    Route::view('/','welcome');
+    Route::resource('journalists',JournalistController::class);
+    Route::resource('research',ResearchController::class);});
+    Route::get('/', [SiteController::class, 'index'])->name('site.home');
+    Route::get('/about', [SiteController::class, 'about'])->name('site.about');
+    Route::get('/courses', [SiteController::class, 'courses'])->name('site.courses');
+    Route::get('/events', [SiteController::class, 'events'])->name('site.events');
+    Route::get('/blog', [SiteController::class, 'blog'])->name('site.blog');
+    Route::get('/contact', [SiteController::class, 'contact'])->name('site.contact');
+    Route::get('/research', [SiteController::class, 'research'])->name('site.research');
+    Route::get('/course_single', [SiteController::class, 'course_single'])->name('site.course_single');
     Auth::routes();
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 });
