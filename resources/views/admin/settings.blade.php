@@ -8,6 +8,11 @@
     <h1 class="h3 text-gray-800 mb-0 ms-9">{{ __('admin.Settings') }}</h1>
     <a href="#"></a>
 </div>
+@if (session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+    @endif
 <hr>
 <form action="{{ route('admin.settings_data') }}" method="POST" enctype="multipart/form-data">
     @csrf
@@ -16,6 +21,15 @@
         <div class="col-md-6 ms-20" >
             <input type="file" class="form-control @error('logo') is-invalid @enderror"  name="logo">
             @error('logo')
+            <small class="invalid-feedback">{{ $message }}</small>
+            @enderror
+        </div>
+        </div>
+    <div class="row align-items-center mb-3 m-8">
+        <label class="col-md-1 mb-0 required"><b>{{ __('admin.Image Features') }}</b></label>
+        <div class="col-md-6 ms-20" >
+            <input type="file" class="form-control @error('image_feature') is-invalid @enderror" name="image_feature">
+            @error('image_feature')
             <small class="invalid-feedback">{{ $message }}</small>
             @enderror
         </div>
@@ -54,7 +68,7 @@
     <div class="row align-items-center mb-3 m-8">
         <label class="col-md-1 mb-0 required"><b>{{ __('admin.Link Gamil') }}</b></label>
         <div class="col-md-6 ms-20" >
-            <input type="url" placeholder="Link Gamil" class="form-control @error('gm_link') is-invalid @enderror" value="{{ settings('gm_link') }}" name="gm_link">
+            <input type="text" placeholder="Link Gamil" class="form-control @error('gm_link') is-invalid @enderror" value="{{ settings('gm_link') }}" name="gm_link">
             @error('gm_link')
             <small class="invalid-feedback">{{ $message }}</small>
                 @enderror

@@ -13,8 +13,17 @@
 <div class="row align-items-center mb-3 m-8">
     <label class="col-md-1 mb-0 required"><b>{{ __('admin.Date') }}</b></label>
     <div class="col-md-6 ms-20" >
-        <input type="date" class="form-control @error('date') is-invalid @enderror" name="date">
+        <input type="number" class="form-control @error('date') is-invalid @enderror" name="date">
         @error('date')
+        <small class="invalid-feedback">{{ $message }}</small>
+        @enderror
+    </div>
+    </div>
+<div class="row align-items-center mb-3 m-8">
+    <label class="col-md-1 mb-0 required"><b>{{ __('admin.Month') }}</b></label>
+    <div class="col-md-6 ms-20" >
+        <input type="text" class="form-control @error('month') is-invalid @enderror" name="month">
+        @error('month')
         <small class="invalid-feedback">{{ $message }}</small>
         @enderror
     </div>

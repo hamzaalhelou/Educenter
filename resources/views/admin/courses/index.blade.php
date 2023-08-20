@@ -23,6 +23,8 @@
         <th>{{ __('admin.field') }}</th>
         <th>{{ __('admin.Price') }}</th>
         <th>{{ __('admin.Duration') }}</th>
+        <th>{{ __('admin.Duration Hours') }}</th>
+        <th>{{ __('admin.Duration Month') }}</th>
         <th>{{ __('admin.Content') }}</th>
         <th>{{ __('admin.Teacher') }}</th>
         <th>{{ __('admin.Actions') }}</th>
@@ -37,6 +39,8 @@
         <td>{{$course->field}}</td>
         <td>{{$course->price}}</td>
         <td>{{$course->duration}}</td>
+        <td>{{$course->duration_hours}}</td>
+        <td>{{$course->duration_month}}</td>
         <td>{{$course->content}}</td>
         <td>{{$course->teacher_id}}</td>
         <td>

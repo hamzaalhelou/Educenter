@@ -25,125 +25,27 @@
   <div class="container">
     <div class="row">
       <!-- blog post -->
+      @foreach ($journalists as $journalist)
       <article class="col-lg-4 col-sm-6 mb-5">
         <div class="card rounded-0 border-bottom border-primary border-top-0 border-left-0 border-right-0 hover-shadow">
-          <img class="card-img-top rounded-0" src="{{ asset('assets/images/blog/post-1.jpg') }}" alt="Post thumb">
+          <img style="height: 250px;object-fit:cover" class="card-img-top rounded-0" src="{{asset('uploads/images/'.$journalist->image)}}" alt="Post thumb">
           <div class="card-body">
             <!-- post meta -->
             <ul class="list-inline mb-3">
               <!-- post date -->
-              <li class="list-inline-item mr-3 ml-0">August 28, 2018</li>
+              <li class="list-inline-item mr-3 ml-0">{{ $journalist->date }}</li>
               <!-- author -->
-              <li class="list-inline-item mr-3 ml-0">By Somrat Sorkar</li>
+              <li class="list-inline-item mr-3 ml-0">By {{ $journalist->writer }}</li>
             </ul>
             <a href="blog-single.html">
-              <h4 class="card-title">Lorem ipsum dolor amet, adipisicing eiusmod tempor.</h4>
+              <h4 class="card-title">{{ $journalist->title }}</h4>
             </a>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicin</p>
+            <p class="card-text">{{ $journalist->content }}</p>
             <a href="blog-single.html" class="btn btn-primary btn-sm">read more</a>
           </div>
         </div>
       </article>
-      <!-- blog post -->
-      <article class="col-lg-4 col-sm-6 mb-5">
-        <div class="card rounded-0 border-bottom border-primary border-top-0 border-left-0 border-right-0 hover-shadow">
-          <img class="card-img-top rounded-0" src="{{ asset('assets/images/blog/post-2.jpg') }}" alt="Post thumb">
-          <div class="card-body">
-            <!-- post meta -->
-            <ul class="list-inline mb-3">
-              <!-- post date -->
-              <li class="list-inline-item mr-3 ml-0">August 13, 2018</li>
-              <!-- author -->
-              <li class="list-inline-item mr-3 ml-0">By Jonathon Drew</li>
-            </ul>
-            <a href="blog-single.html">
-              <h4 class="card-title">Lorem ipsum dolor amet, adipisicing eiusmod tempor.</h4>
-            </a>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicin</p>
-            <a href="blog-single.html" class="btn btn-primary btn-sm">read more</a>
-          </div>
-        </div>
-      </article>
-      <!-- blog post -->
-      <article class="col-lg-4 col-sm-6 mb-5">
-        <div class="card rounded-0 border-bottom border-primary border-top-0 border-left-0 border-right-0 hover-shadow">
-          <img class="card-img-top rounded-0" src="{{ asset('assets/images/blog/post-3.jpg') }}" alt="Post thumb">
-          <div class="card-body">
-            <!-- post meta -->
-            <ul class="list-inline mb-3">
-              <!-- post date -->
-              <li class="list-inline-item mr-3 ml-0">August 24, 2018</li>
-              <!-- author -->
-              <li class="list-inline-item mr-3 ml-0">By Alex Pitt</li>
-            </ul>
-            <a href="blog-single.html">
-              <h4 class="card-title">Lorem ipsum dolor amet, adipisicing eiusmod tempor.</h4>
-            </a>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicin</p>
-            <a href="blog-single.html" class="btn btn-primary btn-sm">read more</a>
-          </div>
-        </div>
-      </article>
-      <!-- blog post -->
-      <article class="col-lg-4 col-sm-6 mb-5">
-        <div class="card rounded-0 border-bottom border-primary border-top-0 border-left-0 border-right-0 hover-shadow">
-          <img class="card-img-top rounded-0" src="{{ asset('assets/images/blog/post-1.jpg') }}" alt="Post thumb">
-          <div class="card-body">
-            <!-- post meta -->
-            <ul class="list-inline mb-3">
-              <!-- post date -->
-              <li class="list-inline-item mr-3 ml-0">August 28, 2018</li>
-              <!-- author -->
-              <li class="list-inline-item mr-3 ml-0">By Somrat Sorkar</li>
-            </ul>
-            <a href="blog-single.html">
-              <h4 class="card-title">Lorem ipsum dolor amet, adipisicing eiusmod tempor.</h4>
-            </a>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicin</p>
-            <a href="blog-single.html" class="btn btn-primary btn-sm">read more</a>
-          </div>
-        </div>
-      </article>
-      <!-- blog post -->
-      <article class="col-lg-4 col-sm-6 mb-5">
-        <div class="card rounded-0 border-bottom border-primary border-top-0 border-left-0 border-right-0 hover-shadow">
-          <img class="card-img-top rounded-0" src="{{ asset('assets/images/blog/post-2.jpg') }}" alt="Post thumb">
-          <div class="card-body">
-            <!-- post meta -->
-            <ul class="list-inline mb-3">
-              <!-- post date -->
-              <li class="list-inline-item mr-3 ml-0">August 13, 2018</li>
-              <!-- author -->
-              <li class="list-inline-item mr-3 ml-0">By Jonathon Drew</li>
-            </ul>
-            <a href="blog-single.html">
-              <h4 class="card-title">Lorem ipsum dolor amet, adipisicing eiusmod tempor.</h4>
-            </a>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicin</p>
-            <a href="blog-single.html" class="btn btn-primary btn-sm">read more</a>
-          </div>
-        </div>
-      </article>
-      <!-- blog post -->
-      <article class="col-lg-4 col-sm-6 mb-5">
-        <div class="card rounded-0 border-bottom border-primary border-top-0 border-left-0 border-right-0 hover-shadow">
-          <img class="card-img-top rounded-0" src="{{ asset('assets/images/blog/post-3.jpg') }}" alt="Post thumb">
-          <div class="card-body">
-            <!-- post meta -->
-            <ul class="list-inline mb-3">
-              <!-- post date -->
-              <li class="list-inline-item mr-3 ml-0">August 24, 2018</li>
-              <!-- author -->
-              <li class="list-inline-item mr-3 ml-0">By Alex Pitt</li>
-            </ul>
-            <a href="blog-single.html">
-              <h4 class="card-title">Lorem ipsum dolor amet, adipisicing eiusmod tempor.</h4>
-            </a>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicin</p>
-            <a href="blog-single.html" class="btn btn-primary btn-sm">read more</a>
-          </div>
-        </div>
-      </article>
+      @endforeach
     </div>
   </div>
 </section>

@@ -28,7 +28,7 @@
       @foreach ($researchs as $research)
       <div class="col-lg-4 col-sm-6 mb-4">
         <div class="card rounded-0 hover-shadow border-top-0 border-left-0 border-right-0">
-          <img class="card-img-top rounded-0" src="{{asset('uploads/images/'.$research->image)}}" alt="research thumb">
+          <img style="height: 250px;object-fit:cover" class="card-img-top rounded-0" src="{{asset('uploads/images/'.$research->image)}}" alt="research thumb">
           <div class="card-body">
             <h4 class="card-title">{{ $research->title }}</h4>
             <p class="card-text">{{$research->content  }}</p>

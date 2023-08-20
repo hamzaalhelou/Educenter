@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
 use App\Models\Slider;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Gate;
 
 class SliderController extends Controller
 {
@@ -13,6 +14,7 @@ class SliderController extends Controller
      */
     public function index()
     {
+        Gate::authorize('all-sliders');
         $sliders = Slider::latest('id')->paginate(6);
         return view('admin.sliders.index',compact('sliders'));
     }

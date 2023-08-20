@@ -1,9 +1,10 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
-use App\Http\Controllers\Controller;
 use App\Models\Teacher;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Gate;
 
 class TeacherController extends Controller
 {
@@ -12,6 +13,7 @@ class TeacherController extends Controller
      */
     public function index()
     {
+        Gate::authorize('all-teachers');
         $teachers = Teacher::latest('id')->paginate(6);
         return view('admin.teachers.index',compact('teachers'));
     }

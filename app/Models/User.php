@@ -43,6 +43,9 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
     public function courses() {
-        return $this->belongsTo(Course::class);
+        return $this->belongsToMany(Course::class);
+    }
+    public function role() {
+        return $this->belongsTo(Role::class);
     }
 }

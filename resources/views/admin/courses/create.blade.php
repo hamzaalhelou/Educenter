@@ -74,6 +74,24 @@
                             </div>
                         </div>
     <div class="row align-items-center mb-3 m-8">
+        <label class="col-md-1 mb-0 required"><b>{{ __('admin.Duration Hours') }}</b></label>
+        <div class="col-md-6 ms-20" >
+            <input type="text" placeholder="{{ __('admin.Duration Hours') }}" class="form-control @error('duration_hours') is-invalid @enderror" name="duration_hours">
+            @error('duration_hours')
+            <small class="invalid-feedback">{{ $message }}</small>
+                @enderror
+        </div>
+    </div>
+    <div class="row align-items-center mb-3 m-8">
+        <label class="col-md-1 mb-0 required"><b>{{ __('admin.Duration Month') }}</b></label>
+        <div class="col-md-6 ms-20" >
+            <input type="text" placeholder="{{ __('admin.Duration Month') }}" class="form-control @error('duration_month') is-invalid @enderror" name="duration_month">
+            @error('duration_month')
+            <small class="invalid-feedback">{{ $message }}</small>
+                @enderror
+        </div>
+    </div>
+    <div class="row align-items-center mb-3 m-8">
         <label class="col-md-1 mb-0 required" ><b>{{ __('admin.Content') }}</b></label>
         <div class="col-md-6 ms-20" >
             <textarea placeholder="{{ __('admin.Content') }}" class="form-control @error('content') is-invalid @enderror" name="content" rows="5"></textarea>

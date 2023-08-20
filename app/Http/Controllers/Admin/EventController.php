@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
 use App\Models\Event;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Gate;
 
 class EventController extends Controller
 {
@@ -13,6 +14,7 @@ class EventController extends Controller
      */
     public function index()
     {
+        Gate::authorize('all-events');
         $events = Event::latest('id')->paginate(6);
         return view('admin.events.index',compact('events'));
     }
@@ -32,6 +34,7 @@ class EventController extends Controller
     {
         $request->validate([
             'date' => 'required',
+            'month' => 'required',
             'image' => 'nullable|mimes:png,jpg,jpeg',
             'address' => 'required',
             'content' => 'required'
@@ -44,6 +47,7 @@ class EventController extends Controller
 
         Event::create([
             'date' => $request->date,
+            'month' => $request->month,
             'image' => $eventimage,
             'address' => $request->address,
             'content' => $request->content
@@ -80,6 +84,7 @@ class EventController extends Controller
     {
         $request->validate([
             'date' => 'required',
+            'month' => 'required',
             'image' => 'nullable|mimes:png,jpg,jpeg',
             'address' => 'required',
             'content' => 'required'
@@ -99,6 +104,7 @@ class EventController extends Controller
 
         $event->update([
             'date' => $request->date,
+            'month' => $request->month,
             'image' => $eventimage,
             'address' => $request->address,
             'content' => $request->content

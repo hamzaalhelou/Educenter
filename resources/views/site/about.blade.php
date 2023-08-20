@@ -42,29 +42,29 @@
       <!-- funfacts item -->
       <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
         <div class="text-center">
-          <h2 class="count text-white" data-count="60">0</h2>
+          <h2 class="count text-white" data-count="{{ $teacher }}">0</h2>
           <h5 class="text-white">TEACHERS</h5>
         </div>
       </div>
       <!-- funfacts item -->
       <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
         <div class="text-center">
-          <h2 class="count text-white" data-count="50">0</h2>
+          <h2 class="count text-white" data-count="{{ $course }}">0</h2>
           <h5 class="text-white">COURSES</h5>
         </div>
       </div>
       <!-- funfacts item -->
       <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
         <div class="text-center">
-          <h2 class="count text-white" data-count="1000">0</h2>
+          <h2 class="count text-white" data-count="{{ $user }}">0</h2>
           <h5 class="text-white">STUDENTS</h5>
         </div>
       </div>
       <!-- funfacts item -->
       <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
         <div class="text-center">
-          <h2 class="count text-white" data-count="3737">0</h2>
-          <h5 class="text-white">SATISFIED CLIENT</h5>
+          <h2 class="count text-white" data-count="{{ $event }}">0</h2>
+          <h5 class="text-white">EVENTS</h5>
         </div>
       </div>
     </div>

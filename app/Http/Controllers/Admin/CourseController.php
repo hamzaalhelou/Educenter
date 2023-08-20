@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
 use App\Models\Course;
 use App\Models\Teacher;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Gate;
 
 class CourseController extends Controller
 {
@@ -14,6 +15,7 @@ class CourseController extends Controller
      */
     public function index()
     {
+        Gate::authorize('all-courses');
         $courses = Course::latest('id')->paginate(6);
         return view('admin.courses.index', compact('courses'));
     }
@@ -44,6 +46,8 @@ class CourseController extends Controller
             'field' => 'required',
             'price' => 'required',
             'duration' => 'required',
+            'duration_hours' => 'required',
+            'duration_month' => 'required',
             'content' => 'required',
             'teacher_id' => 'required',
         ]);
@@ -76,6 +80,8 @@ class CourseController extends Controller
             'field' => $request->field,
             'price' => $request->price,
             'duration' => $request->duration,
+            'duration_hours'=>$request->duration_hours,
+            'duration_month'=>$request->duration_month,
             'content' => $request->content,
             'teacher_id' => $request->teacher_id,
             'image' => $courseimage
@@ -121,6 +127,8 @@ class CourseController extends Controller
             'field' => 'required',
             'price' => 'required',
             'duration' => 'required',
+            'duration_hours' => 'required',
+            'duration_month' => 'required',
             'content' => 'required',
             'teacher_id' => 'required'
         ]);
@@ -142,6 +150,8 @@ class CourseController extends Controller
             'field' => $request->field,
             'price' => $request->price,
             'duration' => $request->duration,
+            'duration_hours'=>$request->duration_hours,
+            'duration_month'=>$request->duration_month,
             'content' => $request->content,
             'teacher_id' => $request->teacher_id,
             'image' => $courseimage

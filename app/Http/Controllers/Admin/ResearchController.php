@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
 use App\Models\Research;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Gate;
 
 class ResearchController extends Controller
 {
@@ -13,6 +14,7 @@ class ResearchController extends Controller
      */
     public function index()
     {
+        Gate::authorize('all-researchs');
         $researchs = Research::latest('id')->paginate(6);
         return view('admin.research.index',compact('researchs'));
     }

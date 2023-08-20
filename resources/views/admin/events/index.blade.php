@@ -17,6 +17,7 @@
     <tr class="table-primary ">
         <th>{{ __('admin.ID') }}</th>
         <th>{{ __('admin.Date') }}</th>
+        <th>{{ __('admin.Month') }}</th>
         <th>{{ __('admin.Image') }}</th>
         <th>{{ __('admin.Addres') }}</th>
         <th>{{ __('admin.Content') }}</th>
@@ -26,6 +27,7 @@
         <tr>
             <td>{{ $event->id }}</td>
             <td>{{ $event->date }}</td>
+            <td>{{ $event->month }}</td>
             <td><img width="100" src="{{ asset('uploads/images/'.$event->image) }}" alt=""></td>
             <td>{{ $event->address }}</td>
             <td>{{ $event->content }}</td>

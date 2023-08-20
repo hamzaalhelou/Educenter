@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
 use App\Models\Journalist;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Gate;
 
 class JournalistController extends Controller
 {
@@ -13,6 +14,7 @@ class JournalistController extends Controller
      */
     public function index()
     {
+        Gate::authorize('all-journalists');
         $journalists = Journalist::latest('id')->paginate(6);
         return view('admin.journalists.index',compact('journalists'));
     }

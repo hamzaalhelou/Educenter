@@ -87,6 +87,27 @@ return[
   'research deleted successfully'=>'تم حذف البحث بنجاح',
   'research updated successfully'=>'تم تعديل البحث بنجاح',
   'research added successfully'=>'تم اضافة البحث بنجاح',
+  'Month'=>'الشهر',
+  'Image Features'=>'صورة الميزات',
+  'Profile data has been updated successfully'=>'تم تحديث بيانات الملف الشخصي بنجاح',
+  'Duration Hours'=>'مدة الساعات',
+  'Duration Month'=>'مدة الشهور',
+  'Email'=>'الايميل',
+  'Account Overview'=>'نظرة عامة على الحساب',
+  'Profile Details'=>'تفاصيل الملف الشخصي',
+  'User'=>'المستخدم',
+  'Profile'=>'الحساب الشخصي',
+  'Roles'=>'الادوار',
+  'Add New Role'=>'اضافة دور جديد',
+  'All Roles'=>'جميع الادوار',
+  'Role added successfully'=>'تم اضافة الدور بنجاح',
+  'Role deleted successfully'=>'تم حذف الدور بنجاح',
+  'Edit role'=>'تعديل دور',
+  'Dark'=>'الداكن',
+  'Light'=>'الفاتح',
+  'System'=>'النظام',
+  'Pages'=>'الصفحات',
+
 
 
 

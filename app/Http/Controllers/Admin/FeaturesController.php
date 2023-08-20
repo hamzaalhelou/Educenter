@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
 use App\Models\Feature;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Gate;
 
 class FeaturesController extends Controller
 {
@@ -13,6 +14,7 @@ class FeaturesController extends Controller
      */
     public function index()
     {
+        Gate::authorize('all-features');
         $features = Feature::latest('id')->paginate(6);
         return view('admin.features.index',compact('features'));
     }
