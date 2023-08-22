@@ -121,6 +121,6 @@ class SliderController extends Controller
         return redirect()
         ->route('admin.sliders.index')
         ->with('msg',__('admin.Slider deleted successfully'))
-        ->with('type', 'danger');
+        ->with('type', 'error');
     }
 }

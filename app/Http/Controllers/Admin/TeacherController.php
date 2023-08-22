@@ -133,6 +133,6 @@ class TeacherController extends Controller
         return redirect()
         ->route('admin.teacher.index')
         ->with('msg',__('admin.teacher deleted successfully'))
-        ->with('type', 'danger');
+        ->with('type', 'error');
     }
 }

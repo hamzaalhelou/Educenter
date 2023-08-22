@@ -2509,6 +2509,7 @@
     <script src="{{ asset('adminassets/js/custom/utilities/modals/create-app.js') }}"></script>
     <script src="{{ asset('adminassets/js/custom/utilities/modals/new-target.js') }}"></script>
     <script src="{{ asset('adminassets/js/custom/utilities/modals/users-search.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!--end::Custom Javascript-->
     <!--end::Javascript-->
     @yield('scripts')

@@ -174,6 +174,6 @@ class CourseController extends Controller
         return redirect()
         ->route('admin.courses.index')
         ->with('msg',__('admin.course deleted successfully'))
-        ->with('type', 'danger');
+        ->with('type', 'error');
     }
 }

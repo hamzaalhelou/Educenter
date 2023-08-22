@@ -7,12 +7,6 @@
     <h1 class="h3 text-gray-800 mb-0 ms-9">{{ __('admin.Features') }}</h1>
     <a class="btn btn-primary me-17" href="{{ route('admin.features.create') }}">{{ __('admin.Add New Feature') }}</a>
 </div>
-
-@if (session('msg'))
-    <div class="alert alert-{{ session('type') }}">
-        {{ session('msg') }}
-    </div>
-@endif
 <hr>
 <table class="table table-bordered m-2 ">
     <tr class="table-primary">
@@ -41,6 +35,16 @@
 </table>
 
 {{ $features->links() }}
+@section('scripts')
+<script>
+  @if (session('msg'))
+  Swal.fire({
+    icon: "{{ session('type') }}",
+    title: "{{ session('msg') }}"
+  })
+  @endif
+</script>
+  @endsection
 @stop
 
 

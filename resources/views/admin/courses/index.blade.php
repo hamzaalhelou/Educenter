@@ -7,11 +7,6 @@
     <h1 class="h3 text-gray-800 mb-0 ms-9">{{ __('admin.Courses') }}</h1>
     <a class="btn btn-primary me-17" href="{{route('admin.courses.create')}}">{{ __('admin.Add New Course') }}</a>
 </div>
-@if (session('msg'))
-    <div class="alert alert-{{ session('type') }}">
-        {{ session('msg') }}
-    </div>
-@endif
 <hr>
 <table class="table table-bordered m-2">
     <tr class="table-primary">
@@ -56,4 +51,14 @@
     @endforeach
 </table>
 {{ $courses->links() }}
+@section('scripts')
+<script>
+  @if (session('msg'))
+  Swal.fire({
+    icon: "{{ session('type') }}",
+    title: "{{ session('msg') }}"
+  })
+  @endif
+</script>
+  @endsection
 @stop

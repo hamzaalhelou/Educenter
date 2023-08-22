@@ -110,6 +110,6 @@ class FeaturesController extends Controller
         return redirect()
         ->route('admin.features.index')
         ->with('msg',__('admin.feature deleted successfully'))
-        ->with('type', 'danger');
+        ->with('type', 'error');
     }
 }

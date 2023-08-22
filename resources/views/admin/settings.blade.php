@@ -8,11 +8,6 @@
     <h1 class="h3 text-gray-800 mb-0 ms-9">{{ __('admin.Settings') }}</h1>
     <a href="#"></a>
 </div>
-@if (session('success'))
-        <div class="alert alert-success">
-            {{ session('success') }}
-        </div>
-    @endif
 <hr>
 <form action="{{ route('admin.settings_data') }}" method="POST" enctype="multipart/form-data">
     @csrf
@@ -101,6 +96,16 @@
     <button class="btn btn-success ms-3"> <i class="fas fa-save"></i>{{ __('admin.Save') }}</button>
     </div>
     </form>
+    @section('scripts')
+    <script>
+      @if (session('success'))
+      Swal.fire({
+        icon: 'success',
+        title: "{{ session('success') }}"
+      })
+      @endif
+    </script>
+      @endsection
 
 @stop
 

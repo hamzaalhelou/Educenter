@@ -11,11 +11,6 @@ __('admin.Account Overview'))
 <form action="{{ route('admin.profile.update') }}" method="POST">
 @csrf
 @method('PUT')
-@if (session('success'))
-        <div class="alert alert-success">
-            {{ session('success') }}
-        </div>
-@endif
 <hr>
 <div class="row align-items-center mb-3 m-8">
     <label class="col-md-1 mb-0 required"><b>{{ __('admin.Name') }}</b></label>
@@ -42,7 +37,16 @@ __('admin.Account Overview'))
 <button class="btn btn-success ms-3"> <i class="fas fa-save"></i>{{ __('admin.Save') }}</button>
 </div>
     </form>
-
+@section('scripts')
+<script>
+    @if (session('success'))
+    Swal.fire({
+    icon: 'success',
+    title: "{{ session('success') }}"
+    })
+    @endif
+</script>
+@endsection
 @stop
 
 

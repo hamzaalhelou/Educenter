@@ -125,6 +125,6 @@ class JournalistController extends Controller
         return redirect()
         ->route('admin.journalists.index')
         ->with('msg',__('admin.Journalist deleted successfully'))
-        ->with('type', 'danger');
+        ->with('type', 'error');
     }
 }
