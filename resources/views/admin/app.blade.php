@@ -126,6 +126,46 @@
                         <!--begin::Navbar-->
                         <div class="app-navbar flex-shrink-0">
                             <!--begin::Theme mode-->
+								<!--begin::Notifications-->
+								<div class="app-navbar-item ms-1 ms-md-3">
+									<!--begin::Menu- wrapper-->
+									<div class="btn btn-icon btn-custom btn-icon-muted btn-active-light btn-active-color-primary w-30px h-30px w-md-40px h-md-40px" data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end">
+										<!--begin::Svg Icon | path: icons/duotune/general/gen022.svg-->
+										<span class="svg-icon svg-icon-2 svg-icon-md-1">
+											<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M17,12 L18.5,12 C19.3284271,12 20,12.6715729 20,13.5 C20,14.3284271 19.3284271,15 18.5,15 L5.5,15 C4.67157288,15 4,14.3284271 4,13.5 C4,12.6715729 4.67157288,12 5.5,12 L7,12 L7.5582739,6.97553494 C7.80974924,4.71225688 9.72279394,3 12,3 C14.2772061,3 16.1902508,4.71225688 16.4417261,6.97553494 L17,12 Z" fill="currentColor" />
+												<path d="M17,12 L18.5,12 C19.3284271,12 20,12.6715729 20,13.5 C20,14.3284271 19.3284271,15 18.5,15 L5.5,15 C4.67157288,15 4,14.3284271 4,13.5 C4,12.6715729 4.67157288,12 5.5,12 L7,12 L7.5582739,6.97553494 C7.80974924,4.71225688 9.72279394,3 12,3 C14.2772061,3 16.1902508,4.71225688 16.4417261,6.97553494 L17,12 Z" fill="currentColor" />
+												<path opacity="0.3" d="M17,12 L18.5,12 C19.3284271,12 20,12.6715729 20,13.5 C20,14.3284271 19.3284271,15 18.5,15 L5.5,15 C4.67157288,15 4,14.3284271 4,13.5 C4,12.6715729 4.67157288,12 5.5,12 L7,12 L7.5582739,6.97553494 C7.80974924,4.71225688 9.72279394,3 12,3 C14.2772061,3 16.1902508,4.71225688 16.4417261,6.97553494 L17,12 Z" fill="currentColor" />
+												<path opacity="0.3" d="M17,12 L18.5,12 C19.3284271,12 20,12.6715729 20,13.5 C20,14.3284271 19.3284271,15 18.5,15 L5.5,15 C4.67157288,15 4,14.3284271 4,13.5 C4,12.6715729 4.67157288,12 5.5,12 L7,12 L7.5582739,6.97553494 C7.80974924,4.71225688 9.72279394,3 12,3 C14.2772061,3 16.1902508,4.71225688 16.4417261,6.97553494 L17,12 Z" fill="currentColor" />
+											</svg>
+										</span>
+										<!--end::Svg Icon-->
+									</div>
+									<!--begin::Menu-->
+									<div class="menu menu-sub menu-sub-dropdown menu-column w-350px w-lg-375px" data-kt-menu="true">
+										<!--begin::Heading-->
+										<div class="d-flex flex-column bgi-no-repeat rounded-top" style="background-image:url('{{ asset('adminassets/media/misc/menu-header-bg.jpg') }}')">
+											<!--begin::Title-->
+											<h3 class="text-white fw-semibold px-9 mt-10 mb-6">{{ __('admin.Notifications') }}</h3>
+											<!--end::Title-->
+											<!--begin::Tabs-->
+
+											<!--end::Tabs-->
+										</div>
+										<!--end::Heading-->
+                                       <!--begin::Tab content-->
+										<div class="tab-content">
+											<!--begin::Tab panel-->
+											<x-dashboard.notification-menu />
+											<!--end::Tab panel-->
+										</div>
+										<!--end::Tab content-->
+
+									</div>
+									<!--end::Menu-->
+									<!--end::Menu wrapper-->
+								</div>
+								<!--end::Notifications-->
                             <div class="app-navbar-item ms-1 ms-md-3">
                                 <!--begin::Menu toggle-->
                                 <a href="#"
@@ -191,6 +231,7 @@
                                 <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-title-gray-700 menu-icon-muted menu-active-bg menu-state-color fw-semibold py-4 fs-base w-150px"
                                     data-kt-menu="true" data-kt-element="theme-mode-menu">
                                     <!--begin::Menu item-->
+
                                     <div class="menu-item px-3 my-0">
                                         <a href="#" class="menu-link px-3 py-2" data-kt-element="mode"
                                             data-kt-value="light">
@@ -358,10 +399,12 @@
                                     </div>
                                     <!--end::Menu item-->
                                     <!--begin::Menu item-->
+                                    @can('settings')
                                     <div class="menu-item px-5 my-1">
                                         <a href="{{ route('admin.settings') }}"
                                             class="menu-link px-5">{{ __('admin.Settings') }}</a>
                                     </div>
+                                    @endcan
                                     <!--end::Menu item-->
                                     <!--begin::Menu item-->
                                     <div class="menu-item px-5">
@@ -588,15 +631,6 @@
                                          @endcan
                                     </div>
                                     <!--end:Menu sub-->
-                                </div>
-                                <!--end:Menu item-->
-                                <!--begin:Menu item-->
-                                <div class="menu-item pt-5">
-                                    <!--begin:Menu content-->
-                                    <div class="menu-content">
-                                        <span class="menu-heading fw-bold text-uppercase fs-7">{{ __('admin.Pages') }}</span>
-                                    </div>
-                                    <!--end:Menu content-->
                                 </div>
                                 <!--end:Menu item-->
                                 @can('all-roles')
@@ -2510,6 +2544,8 @@
     <script src="{{ asset('adminassets/js/custom/utilities/modals/new-target.js') }}"></script>
     <script src="{{ asset('adminassets/js/custom/utilities/modals/users-search.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <!--end::Custom Javascript-->
     <!--end::Javascript-->
     @yield('scripts')

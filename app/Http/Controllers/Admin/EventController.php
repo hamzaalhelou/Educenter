@@ -5,7 +5,10 @@ namespace App\Http\Controllers\Admin;
 use App\Models\Event;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Support\Facades\Gate;
+use App\Notifications\NewUserNotification;
+use Illuminate\Support\Facades\Notification;
 
 class EventController extends Controller
 {
@@ -53,6 +56,8 @@ class EventController extends Controller
             'content' => $request->content
 
         ]);
+
+
         return redirect()
         ->route('admin.events.index')
         ->with('msg',__('admin.Event added successfully'))

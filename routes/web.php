@@ -16,7 +16,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 Route::prefix(LaravelLocalization::setLocale())->group(function(){
 
-    Route::prefix('admin')->name('admin.')->middleware('auth','checkuser')->group(function(){
+    Route::prefix('admin')->name('admin.')->middleware('auth')->group(function(){
     Route::get('/',[AdminController::class,'index'])->name('index');
     Route::get('/profile', [AdminController::class, 'profile'])->name('profile');
     Route::put('/profile/update',[AdminController::class,'update'])->name('profile.update')->middleware('auth');

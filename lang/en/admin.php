@@ -108,6 +108,16 @@ return[
   'Light'=>'Light',
   'System'=>'System',
   'Pages'=>'Pages',
+  'Posts'=>'Posts',
+  'Body'=>'Body',
+  'Add New Post'=>'Add New Post',
+  'All Posts'=>'All Posts',
+  'Edit Post'=>'Edit Post',
+  'Post added successfully'=>'Post added successfully',
+  'Post updated successfully'=>'Post updated successfully',
+  'Post deleted successfully'=>'Post deleted successfully',
+  'Alerts'=>'Alerts',
+  'Notifications'=>'Notifications'
 
 
 

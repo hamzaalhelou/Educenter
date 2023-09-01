@@ -3,11 +3,14 @@
 @section('title',__('admin.Dashboards'))
 @section('titlegage',__('admin.Courses'))
 @section('content')
-<div class="d-flex justify-content-between align-items-center  mb-4">
-    <h1 class="h3 text-gray-800 mb-0 ms-9">{{ __('admin.Courses') }}</h1>
+<div class="card mb-3 m-3" >
+    <div class="card-body">
+<div class="d-flex justify-content-between align-items-center">
+    <h1 class="h3 text-gray-800 mb-0">{{ __('admin.Courses') }}</h1>
     <a class="btn btn-primary me-17" href="{{route('admin.courses.create')}}">{{ __('admin.Add New Course') }}</a>
 </div>
-<hr>
+</div>
+<div class="card-body border-top">
 <table class="table table-bordered m-2">
     <tr class="table-primary">
         <th>{{ __('admin.ID') }}</th>
@@ -37,7 +40,7 @@
         <td>{{$course->duration_hours}}</td>
         <td>{{$course->duration_month}}</td>
         <td>{{$course->content}}</td>
-        <td>{{$course->teacher_id}}</td>
+        <td>{{$course->teacher->name}}</td>
         <td>
             <a class="btn btn-primary btn-sm m-2" href="{{ route('admin.courses.edit',$course->id) }}"><i class="fas fa-edit"></i> </a>
             <form class="d-inline" method="POST" action="{{ route('admin.courses.destroy',$course->id) }}">
@@ -50,6 +53,8 @@
 
     @endforeach
 </table>
+</div>
+</div>
 {{ $courses->links() }}
 @section('scripts')
 <script>

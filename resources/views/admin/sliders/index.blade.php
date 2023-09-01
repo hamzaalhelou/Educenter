@@ -3,11 +3,14 @@
 @section('title',__('admin.Dashboards'))
 @section('titlegage',__('admin.Sliders') )
 @section('content')
-<div class="d-flex justify-content-between align-items-center  mb-4">
-    <h1 class="h3 text-gray-800 mb-0 ms-9">{{ __('admin.Sliders') }}</h1>
+<div class="card mb-3 m-3" >
+    <div class="card-body">
+<div class="d-flex justify-content-between align-items-center">
+    <h1 class="h3 text-gray-800 mb-0">{{ __('admin.Sliders') }}</h1>
     <a class="btn btn-primary me-17" href="{{ route('admin.sliders.create') }}">{{ __('admin.Add New Slider') }}</a>
 </div>
-<hr>
+</div>
+<div class="card-body border-top">
 <table class="table table-bordered m-2">
     <tr class="table-primary ">
         <th>{{ __('admin.ID') }}</th>
@@ -35,6 +38,8 @@
         </tr>
     @endforeach
 </table>
+</div>
+</div>
 
 {{ $sliders->links() }}
 @section('scripts')

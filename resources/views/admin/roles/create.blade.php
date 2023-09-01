@@ -6,14 +6,16 @@
 @section('titlegage',
 __('admin.Roles'))
 @section('content')
-<div class="d-flex justify-content-between align-items-center  mb-4">
-    <h1 class="h3 text-gray-800 mb-0 ms-9">{{ __('admin.Add New Role') }}</h1>
+<div class="card mb-3 m-3" >
+    <div class="card-body">
+<div class="d-flex justify-content-between align-items-center">
+    <h1 class="h3 text-gray-800 mb-0">{{ __('admin.Add New Role') }}</h1>
     <a class="btn btn-primary me-17 " href="{{ route('admin.roles.index') }}">{{ __('admin.All Roles') }}</a>
 </div>
-
+</div>
 <form action="{{ route('admin.roles.store') }}" method="POST" enctype="multipart/form-data" class="container">
 @csrf
-<hr>
+<div class="card-body border-top">
 <div class="row align-items-center mb-3 m-8">
     <label class="col-md-1 mb-0 required"><b>{{ __('admin.Name') }}</b></label>
     <div class="col-md-6 ms-20" >
@@ -31,14 +33,13 @@ __('admin.Roles'))
 <label class="form-check form-check-custom form-check-solid align-items-start mb-1 m-4"> <input class="form-check-input me-3" type="checkbox" value="{{ $p->id }}" name="permissions[]"><b>{{ $p->name }}</b></label> <br>
 @endforeach
 </div>
-    <hr class="mt-10">
     <div class="card-footer d-flex justify-content-end py-6 px-9 m-5">
          <button type="button" onclick="history.back()" class="btn btn-secondary"> <i class="fas fa-ban"></i>{{ __('admin.Cancel') }}</button>
          <button class="btn btn-success ms-3"> <i class="fas fa-save"></i>{{ __('admin.Save') }}</button>
     </div>
-
+</div>
 </form>
-
+</div>
 @stop
 
 @section('scripts')

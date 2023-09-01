@@ -11,16 +11,20 @@ use Illuminate\Notifications\Notification;
 class NewUserNotification extends Notification
 {
     use Queueable;
-    protected $name;
-    protected $email;
+    protected $post_id;
+    protected $user_create;
+    protected $title;
+    protected $body;
 
     /**
      * Create a new notification instance.
      */
-    public function __construct($name,$email)
+    public function __construct($user_create,$title,$body,$post_id)
     {
-        $this->name = $name;
-        $this->email = $email;
+        $this->user_create = $user_create;
+        $this->title = $title;
+        $this->body = $body;
+        $this->post_id = $post_id;
     }
 
     /**
@@ -30,7 +34,7 @@ class NewUserNotification extends Notification
      */
     public function via(object $notifiable): array
     {
-        return ['mail'];
+        return ['database'];
     }
 
     /**
@@ -39,7 +43,7 @@ class NewUserNotification extends Notification
     public function toMail(object $notifiable): MailMessage
     {
         return (new MailMessage)
-                    ->greeting('Hello'.$notifiable->name)
+                    ->greeting('Hello')
                     ->line('The introduction to the notification.')
                     ->action('Notification Action',route('site.home'))
                     ->line('Thank you for using our application!');
@@ -50,11 +54,15 @@ class NewUserNotification extends Notification
      *
      * @return array<string, mixed>
      */
-    public function toArray(object $notifiable): array
+    public function toDatabase(object $notifiable): array
     {
         return [
-            'name' => $this->name,
-            'email' => $this->email
+            'post_id'=>$this->post_id,
+            'user_create'=>$this->user_create,
+            'title'=>$this->title,
+            'body'=>$this->body,
+
+
         ];
     }
 }

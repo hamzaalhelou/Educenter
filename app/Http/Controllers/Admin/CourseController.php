@@ -6,7 +6,10 @@ use App\Models\Course;
 use App\Models\Teacher;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Support\Facades\Gate;
+use App\Notifications\NewUserNotification;
+use Illuminate\Support\Facades\Notification;
 
 class CourseController extends Controller
 {
@@ -73,7 +76,7 @@ class CourseController extends Controller
         // $isSaved = $course->save();
         // return $isSaved ?  "yes" : "no";
 
-         Course::create([
+        $course=   Course::create([
             'date' => $request->date,
             'title' => $request->title,
             'category' => $request->category,
@@ -87,6 +90,13 @@ class CourseController extends Controller
             'image' => $courseimage
         ]);
 
+//
+//
+$id =$course->id;
+    $user_create = auth()->user()->name;
+    $title = 'New Course';
+    $body = 'A new course has been added';
+    Notification::send($id, new NewUserNotification($title, $id,$user_create,$body));
 
 
         return redirect()

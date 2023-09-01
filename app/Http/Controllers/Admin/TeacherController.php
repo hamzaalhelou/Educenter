@@ -54,6 +54,9 @@ class TeacherController extends Controller
             'in_link' => $request->in_link,
             'ln_link' => $request->ln_link
         ]);
+
+
+        
         return redirect()
         ->route('admin.teacher.index')
         ->with('msg',__('admin.teachers added successfully'))

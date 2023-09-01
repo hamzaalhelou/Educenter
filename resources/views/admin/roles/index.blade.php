@@ -4,11 +4,14 @@
 @section('title2',__('admin.Roles'))
 @section('titlegage',__('admin.Roles') )
 @section('content')
-<div class="d-flex justify-content-between align-items-center  mb-4">
-    <h1 class="h3 text-gray-800 mb-0 ms-9">{{ __('admin.Roles') }}</h1>
+<div class="card mb-3 m-3" >
+    <div class="card-body">
+<div class="d-flex justify-content-between align-items-center">
+    <h1 class="h3 text-gray-800 mb-0">{{ __('admin.Roles') }}</h1>
     <a class="btn btn-primary me-17" href="{{ route('admin.roles.create') }}">{{ __('admin.Add New Role') }}</a>
 </div>
-<hr>
+</div>
+<div class="card-body border-top">
 <table class="table table-bordered m-2">
     <tr class="table-primary ">
         <th>{{ __('admin.ID') }}</th>
@@ -29,7 +32,8 @@
         </tr>
     @endforeach
 </table>
-
+</div>
+</div>
 {{ $roles->links() }}
 @section('scripts')
 <script>

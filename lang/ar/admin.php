@@ -107,6 +107,16 @@ return[
   'Light'=>'الفاتح',
   'System'=>'النظام',
   'Pages'=>'الصفحات',
+  'Posts'=>'الاشعارات',
+  'Body'=>'المحتوى',
+  'Add New Post'=>'اضافة اشعار جديد',
+  'All Posts'=>'جميع الاشعارات',
+  'Edit Post'=>'تعديل اشعار',
+  'Posts added successfully'=>'تم اضافة الاشعار بنجاح',
+  'Post updated successfully'=>'تم تعديل الاشعار بنجاح',
+  'Post deleted successfully'=>'تم حذف الاشعار بنجاح',
+  'Alerts'=>'التنبهات',
+  'Notifications'=>'الاشعارات',
 
 
 

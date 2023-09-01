@@ -51,8 +51,8 @@ class AdminController extends Controller
     public function settings_data(Request $request)
     {
         $request->validate([
-            'logo' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'image_feature' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'logo' => 'nullable|mimes:png,jpg,jpeg',
+            'image_feature' => 'nullable|mimes:png,jpg,jpeg',
             'fb_link' => 'required',
             'tw_link' => 'required',
             'in_link' => 'required',
