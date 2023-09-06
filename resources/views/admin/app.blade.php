@@ -531,30 +531,23 @@
                             <div class="menu menu-column menu-rounded menu-sub-indention px-3"
                                 id="#kt_app_sidebar_menu" data-kt-menu="true" data-kt-menu-expand="false">
                                 <!--begin:Menu item-->
-                                <div data-kt-menu-trigger="click" class="menu-item here show menu-accordion">
+                                <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                                     <!--begin:Menu link-->
                                     <span class="menu-link">
                                         <span class="menu-icon">
-                                            <!--begin::Svg Icon | path: icons/duotune/general/gen025.svg-->
+                                            <!--begin::Svg Icon | path: icons/duotune/communication/com005.svg-->
                                             <span class="svg-icon svg-icon-2">
                                                 <svg width="24" height="24" viewBox="0 0 24 24"
                                                     fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <rect x="2" y="2" width="9"
-                                                        height="9" rx="2" fill="currentColor" />
-                                                    <rect opacity="0.3" x="13" y="2"
-                                                        width="9" height="9" rx="2"
-                                                        fill="currentColor" />
-                                                    <rect opacity="0.3" x="13" y="13"
-                                                        width="9" height="9" rx="2"
-                                                        fill="currentColor" />
-                                                    <rect opacity="0.3" x="2" y="13"
-                                                        width="9" height="9" rx="2"
-                                                        fill="currentColor" />
+                                                    <path d="M6,5 L18,5 C19.6568542,5 21,6.34314575 21,8 L21,17 C21,18.6568542 19.6568542,20 18,20 L6,20 C4.34314575,20 3,18.6568542 3,17 L3,8 C3,6.34314575 4.34314575,5 6,5 Z M5,17 L14,17 L9.5,11 L5,17 Z M16,14 C17.6568542,14 19,12.6568542 19,11 C19,9.34314575 17.6568542,8 16,8 C14.3431458,8 13,9.34314575 13,11 C13,12.6568542 14.3431458,14 16,14 Z" fill="#currentColor"/>
+                                                    <path opacity="0.3"
+                                                    d="M6,5 L18,5 C19.6568542,5 21,6.34314575 21,8 L21,17 C21,18.6568542 19.6568542,20 18,20 L6,20 C4.34314575,20 3,18.6568542 3,17 L3,8 C3,6.34314575 4.34314575,5 6,5 Z M5,17 L14,17 L9.5,11 L5,17 Z M16,14 C17.6568542,14 19,12.6568542 19,11 C19,9.34314575 17.6568542,8 16,8 C14.3431458,8 13,9.34314575 13,11 C13,12.6568542 14.3431458,14 16,14 Z"  fill="currentColor" />
                                                 </svg>
                                             </span>
                                             <!--end::Svg Icon-->
                                         </span>
-                                        <span class="menu-title">{{ __('admin.Dashboards') }}</span>
+                                        <span class="menu-title">{{__('admin.Sliders')}}</span>
+                                        <span class="menu-arrow"></span>
                                     </span>
                                     <!--end:Menu link-->
                                     <!--begin:Menu sub-->
@@ -562,25 +555,7 @@
                                         <!--begin:Menu item-->
                                         <div class="menu-item">
                                             <!--begin:Menu link-->
-                                            <a class="menu-link
-                                             {{ Route::is('admin.index') ? 'active' : '' }}
-                                             "
-                                                href="{{ route('admin.index') }}">
-                                                <span class="menu-bullet">
-                                                    <span class="bullet bullet-dot"></span>
-                                                </span>
-                                                <span class="menu-title">{{ __('admin.Main') }}</span>
-                                            </a>
-                                            <!--end:Menu link-->
-                                        </div>
-                                        <!--end:Menu item-->
-                                        <!--begin:Menu item-->
-                                        @can('all-sliders')
-                                        <div class="menu-item">
-                                            <!--begin:Menu link-->
-                                            <a class="menu-link
-                                             {{ Route::is('admin.sliders.index') ? 'active' : '' }}
-                                             "
+                                            <a class="menu-link {{ Route::is('admin.sliders.index') ? 'active' : '' }}"
                                                 href="{{ route('admin.sliders.index') }}">
                                                 <span class="menu-bullet">
                                                     <span class="bullet bullet-dot"></span>
@@ -589,10 +564,33 @@
                                             </a>
                                             <!--end:Menu link-->
                                         </div>
-                                         @endcan
                                         <!--end:Menu item-->
+                                    </div>
+                                    <!--end:Menu sub-->
+                                </div>
+                                <!--begin:Menu item-->
+                                <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+                                    <!--begin:Menu link-->
+                                    <span class="menu-link">
+                                        <span class="menu-icon">
+                                            <!--begin::Svg Icon | path: icons/duotune/communication/com005.svg-->
+                                            <span class="svg-icon svg-icon-2">
+                                                <svg width="24" height="24" viewBox="0 0 24 24"
+                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M8,4 L16,4 C17.1045695,4 18,4.8954305 18,6 L18,17.726765 C18,18.2790497 17.5522847,18.726765 17,18.726765 C16.7498083,18.726765 16.5087052,18.6329798 16.3242754,18.4639191 L12.6757246,15.1194142 C12.2934034,14.7689531 11.7065966,14.7689531 11.3242754,15.1194142 L7.67572463,18.4639191 C7.26860564,18.8371115 6.63603827,18.8096086 6.26284586,18.4024896 C6.09378519,18.2180598 6,17.9769566 6,17.726765 L6,6 C6,4.8954305 6.8954305,4 8,4 Z" fill="#currentColor"/>
+                                                    <path opacity="0.3"
+                                                    d="M8,4 L16,4 C17.1045695,4 18,4.8954305 18,6 L18,17.726765 C18,18.2790497 17.5522847,18.726765 17,18.726765 C16.7498083,18.726765 16.5087052,18.6329798 16.3242754,18.4639191 L12.6757246,15.1194142 C12.2934034,14.7689531 11.7065966,14.7689531 11.3242754,15.1194142 L7.67572463,18.4639191 C7.26860564,18.8371115 6.63603827,18.8096086 6.26284586,18.4024896 C6.09378519,18.2180598 6,17.9769566 6,17.726765 L6,6 C6,4.8954305 6.8954305,4 8,4 Z"  fill="currentColor" />
+                                                </svg>
+                                            </span>
+                                            <!--end::Svg Icon-->
+                                        </span>
+                                        <span class="menu-title">{{__('admin.Features')}}</span>
+                                        <span class="menu-arrow"></span>
+                                    </span>
+                                    <!--end:Menu link-->
+                                    <!--begin:Menu sub-->
+                                    <div class="menu-sub menu-sub-accordion">
                                         <!--begin:Menu item-->
-                                        @can('all-features')
                                         <div class="menu-item">
                                             <!--begin:Menu link-->
                                             <a class="menu-link {{ Route::is('admin.features.index') ? 'active' : '' }}"
@@ -604,10 +602,33 @@
                                             </a>
                                             <!--end:Menu link-->
                                         </div>
-                                        @endcan
                                         <!--end:Menu item-->
+                                    </div>
+                                    <!--end:Menu sub-->
+                                </div>
+                                 <!--begin:Menu item-->
+                                 <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+                                    <!--begin:Menu link-->
+                                    <span class="menu-link">
+                                        <span class="menu-icon">
+                                            <!--begin::Svg Icon | path: icons/duotune/communication/com005.svg-->
+                                            <span class="svg-icon svg-icon-2">
+                                                <svg width="24" height="24" viewBox="0 0 24 24"
+                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M6,5 L18,5 C19.1045695,5 20,5.8954305 20,7 L20,19 C20,20.1045695 19.1045695,21 18,21 L6,21 C4.8954305,21 4,20.1045695 4,19 L4,7 C4,5.8954305 4.8954305,5 6,5 Z M9,9 C8.44771525,9 8,9.44771525 8,10 C8,10.5522847 8.44771525,11 9,11 L15,11 C15.5522847,11 16,10.5522847 16,10 C16,9.44771525 15.5522847,9 15,9 L9,9 Z" fill="#currentColor"/>
+                                                    <path opacity="0.3"
+                                                    d="M6,5 L18,5 C19.1045695,5 20,5.8954305 20,7 L20,19 C20,20.1045695 19.1045695,21 18,21 L6,21 C4.8954305,21 4,20.1045695 4,19 L4,7 C4,5.8954305 4.8954305,5 6,5 Z M9,9 C8.44771525,9 8,9.44771525 8,10 C8,10.5522847 8.44771525,11 9,11 L15,11 C15.5522847,11 16,10.5522847 16,10 C16,9.44771525 15.5522847,9 15,9 L9,9 Z"  fill="currentColor" />
+                                                </svg>
+                                            </span>
+                                            <!--end::Svg Icon-->
+                                        </span>
+                                        <span class="menu-title">{{__('admin.Courses')}}</span>
+                                        <span class="menu-arrow"></span>
+                                    </span>
+                                    <!--end:Menu link-->
+                                    <!--begin:Menu sub-->
+                                    <div class="menu-sub menu-sub-accordion">
                                         <!--begin:Menu item-->
-                                        @can('all-courses')
                                         <div class="menu-item">
                                             <!--begin:Menu link-->
                                             <a class="menu-link {{ Route::is('admin.courses.index') ? 'active' : '' }}"
@@ -619,13 +640,37 @@
                                             </a>
                                             <!--end:Menu link-->
                                         </div>
-                                        @endcan
                                         <!--end:Menu item-->
+                                    </div>
+                                    <!--end:Menu sub-->
+                                </div>
+                                  <!--begin:Menu item-->
+                                  <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+                                    <!--begin:Menu link-->
+                                    <span class="menu-link">
+                                        <span class="menu-icon">
+                                            <!--begin::Svg Icon | path: icons/duotune/communication/com005.svg-->
+                                            <span class="svg-icon svg-icon-2">
+                                                <svg width="24" height="24" viewBox="0 0 24 24"
+                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M12,11 C9.790861,11 8,9.209139 8,7 C8,4.790861 9.790861,3 12,3 C14.209139,3 16,4.790861 16,7 C16,9.209139 14.209139,11 12,11 Z" fill="currentColor" fill-rule="nonzero" opacity="0.3"/>
+                                                    <path opacity="0.3"
+                                                    d="M3.00065168,20.1992055 C3.38825852,15.4265159 7.26191235,13 11.9833413,13 C16.7712164,13 20.7048837,15.2931929 20.9979143,20.2 C21.0095879,20.3954741 20.9979143,21 20.2466999,21 C16.541124,21 11.0347247,21 3.72750223,21 C3.47671215,21 2.97953825,20.45918 3.00065168,20.1992055 Z"  fill="currentColor" fill-rule="nonzero" />
+                                                </svg>
+                                            </span>
+                                            <!--end::Svg Icon-->
+                                        </span>
+                                        <span class="menu-title">{{__('admin.Teachers')}}</span>
+                                        <span class="menu-arrow"></span>
+                                    </span>
+                                    <!--end:Menu link-->
+                                    <!--begin:Menu sub-->
+                                    <div class="menu-sub menu-sub-accordion">
                                         <!--begin:Menu item-->
-                                        @can('all-teachers')
                                         <div class="menu-item">
                                             <!--begin:Menu link-->
-                                            <a class="menu-link {{ Route::is('admin.teacher.index') ? 'active' : '' }}" href="{{ route('admin.teacher.index') }}">
+                                            <a class="menu-link {{ Route::is('admin.teacher.index') ? 'active' : '' }}"
+                                                href="{{ route('admin.teacher.index') }}">
                                                 <span class="menu-bullet">
                                                     <span class="bullet bullet-dot"></span>
                                                 </span>
@@ -633,13 +678,37 @@
                                             </a>
                                             <!--end:Menu link-->
                                         </div>
-                                        @endcan
                                         <!--end:Menu item-->
+                                    </div>
+                                    <!--end:Menu sub-->
+                                </div>
+                                 <!--begin:Menu item-->
+                                 <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+                                    <!--begin:Menu link-->
+                                    <span class="menu-link">
+                                        <span class="menu-icon">
+                                            <!--begin::Svg Icon | path: icons/duotune/communication/com005.svg-->
+                                            <span class="svg-icon svg-icon-2">
+                                                <svg width="24" height="24" viewBox="0 0 24 24"
+                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M8,3 L8,3.5 C8,4.32842712 8.67157288,5 9.5,5 L14.5,5 C15.3284271,5 16,4.32842712 16,3.5 L16,3 L18,3 C19.1045695,3 20,3.8954305 20,5 L20,21 C20,22.1045695 19.1045695,23 18,23 L6,23 C4.8954305,23 4,22.1045695 4,21 L4,5 C4,3.8954305 4.8954305,3 6,3 L8,3 Z" fill="currentColor" fill-rule="nonzero" opacity="0.3"/>
+                                                    <path opacity="0.3"
+                                                    d="M11,2 C11,1.44771525 11.4477153,1 12,1 C12.5522847,1 13,1.44771525 13,2 L14.5,2 C14.7761424,2 15,2.22385763 15,2.5 L15,3.5 C15,3.77614237 14.7761424,4 14.5,4 L9.5,4 C9.22385763,4 9,3.77614237 9,3.5 L9,2.5 C9,2.22385763 9.22385763,2 9.5,2 L11,2 Z"  fill="currentColor" fill-rule="nonzero" />
+                                                </svg>
+                                            </span>
+                                            <!--end::Svg Icon-->
+                                        </span>
+                                        <span class="menu-title">{{__('admin.Events')}}</span>
+                                        <span class="menu-arrow"></span>
+                                    </span>
+                                    <!--end:Menu link-->
+                                    <!--begin:Menu sub-->
+                                    <div class="menu-sub menu-sub-accordion">
                                         <!--begin:Menu item-->
-                                        @can('all-events')
                                         <div class="menu-item">
                                             <!--begin:Menu link-->
-                                            <a class="menu-link {{ Route::is('admin.events.index') ? 'active' : '' }}" href="{{ route('admin.events.index') }}">
+                                            <a class="menu-link {{ Route::is('admin.events.index') ? 'active' : '' }}"
+                                                href="{{ route('admin.events.index') }}">
                                                 <span class="menu-bullet">
                                                     <span class="bullet bullet-dot"></span>
                                                 </span>
@@ -647,27 +716,75 @@
                                             </a>
                                             <!--end:Menu link-->
                                         </div>
-                                        @endcan
                                         <!--end:Menu item-->
-                                         <!--begin:Menu item-->
-                                         @can('all-researchs')
-                                         <div class="menu-item">
-                                            <!--begin:Menu link-->
-                                            <a class="menu-link {{ Route::is('admin.research.index') ? 'active' : '' }}" href="{{ route('admin.research.index') }}">
-                                                <span class="menu-bullet">
-                                                    <span class="bullet bullet-dot"></span>
-                                                </span>
-                                                <span class="menu-title">{{ __('admin.Researchs') }}</span>
-                                            </a>
-                                            <!--end:Menu link-->
-                                        </div>
-                                        @endcan
-                                        <!--end:Menu item-->
+                                    </div>
+                                    <!--end:Menu sub-->
+                                </div>
+                                <!--begin:Menu item-->
+                                <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+                                <!--begin:Menu link-->
+                                <span class="menu-link">
+                                    <span class="menu-icon">
+                                        <!--begin::Svg Icon | path: icons/duotune/communication/com005.svg-->
+                                        <span class="svg-icon svg-icon-2">
+                                            <svg width="24" height="24" viewBox="0 0 24 24"
+                                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M14.2928932,16.7071068 C13.9023689,16.3165825 13.9023689,15.6834175 14.2928932,15.2928932 C14.6834175,14.9023689 15.3165825,14.9023689 15.7071068,15.2928932 L19.7071068,19.2928932 C20.0976311,19.6834175 20.0976311,20.3165825 19.7071068,20.7071068 C19.3165825,21.0976311 18.6834175,21.0976311 18.2928932,20.7071068 L14.2928932,16.7071068 Z" fill="currentColor" fill-rule="nonzero" opacity="0.3"/>
+                                                <path opacity="0.3"
+                                                d="M11,16 C13.7614237,16 16,13.7614237 16,11 C16,8.23857625 13.7614237,6 11,6 C8.23857625,6 6,8.23857625 6,11 C6,13.7614237 8.23857625,16 11,16 Z M11,18 C7.13400675,18 4,14.8659932 4,11 C4,7.13400675 7.13400675,4 11,4 C14.8659932,4 18,7.13400675 18,11 C18,14.8659932 14.8659932,18 11,18 Z"  fill="currentColor" fill-rule="nonzero" />
+                                            </svg>
+                                        </span>
+                                        <!--end::Svg Icon-->
+                                    </span>
+                                    <span class="menu-title">{{__('admin.Researchs')}}</span>
+                                    <span class="menu-arrow"></span>
+                                </span>
+                                <!--end:Menu link-->
+                                <!--begin:Menu sub-->
+                                <div class="menu-sub menu-sub-accordion">
+                                    <!--begin:Menu item-->
+                                    <div class="menu-item">
+                                        <!--begin:Menu link-->
+                                        <a class="menu-link {{ Route::is('admin.research.index') ? 'active' : '' }}"
+                                            href="{{ route('admin.research.index') }}">
+                                            <span class="menu-bullet">
+                                                <span class="bullet bullet-dot"></span>
+                                            </span>
+                                            <span class="menu-title">{{ __('admin.Researchs') }}</span>
+                                        </a>
+                                        <!--end:Menu link-->
+                                    </div>
+                                    <!--end:Menu item-->
+                                </div>
+                                <!--end:Menu sub-->
+                                </div>
+                                <!--begin:Menu item-->
+                                <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+                                    <!--begin:Menu link-->
+                                    <span class="menu-link">
+                                        <span class="menu-icon">
+                                            <!--begin::Svg Icon | path: icons/duotune/communication/com005.svg-->
+                                            <span class="svg-icon svg-icon-2">
+                                                <svg width="24" height="24" viewBox="0 0 24 24"
+                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M4.85714286,1 L11.7364114,1 C12.0910962,1 12.4343066,1.12568431 12.7051108,1.35473959 L17.4686994,5.3839416 C17.8056532,5.66894833 18,6.08787823 18,6.52920201 L18,19.0833333 C18,20.8738751 17.9795521,21 16.1428571,21 L4.85714286,21 C3.02044787,21 3,20.8738751 3,19.0833333 L3,2.91666667 C3,1.12612489 3.02044787,1 4.85714286,1 Z M8,12 C7.44771525,12 7,12.4477153 7,13 C7,13.5522847 7.44771525,14 8,14 L15,14 C15.5522847,14 16,13.5522847 16,13 C16,12.4477153 15.5522847,12 15,12 L8,12 Z M8,16 C7.44771525,16 7,16.4477153 7,17 C7,17.5522847 7.44771525,18 8,18 L11,18 C11.5522847,18 12,17.5522847 12,17 C12,16.4477153 11.5522847,16 11,16 L8,16 Z" fill="currentColor" fill-rule="nonzero" opacity="0.3"/>
+                                                    <path opacity="0.3"
+                                                    d="M6.85714286,3 L14.7364114,3 C15.0910962,3 15.4343066,3.12568431 15.7051108,3.35473959 L20.4686994,7.3839416 C20.8056532,7.66894833 21,8.08787823 21,8.52920201 L21,21.0833333 C21,22.8738751 20.9795521,23 19.1428571,23 L6.85714286,23 C5.02044787,23 5,22.8738751 5,21.0833333 L5,4.91666667 C5,3.12612489 5.02044787,3 6.85714286,3 Z M8,12 C7.44771525,12 7,12.4477153 7,13 C7,13.5522847 7.44771525,14 8,14 L15,14 C15.5522847,14 16,13.5522847 16,13 C16,12.4477153 15.5522847,12 15,12 L8,12 Z M8,16 C7.44771525,16 7,16.4477153 7,17 C7,17.5522847 7.44771525,18 8,18 L11,18 C11.5522847,18 12,17.5522847 12,17 C12,16.4477153 11.5522847,16 11,16 L8,16 Z"  fill="currentColor" fill-rule="nonzero" />
+                                                </svg>
+                                            </span>
+                                            <!--end::Svg Icon-->
+                                        </span>
+                                        <span class="menu-title">{{__('admin.Journalists')}}</span>
+                                        <span class="menu-arrow"></span>
+                                    </span>
+                                    <!--end:Menu link-->
+                                    <!--begin:Menu sub-->
+                                    <div class="menu-sub menu-sub-accordion">
                                         <!--begin:Menu item-->
-                                        @can('all-journalists')
                                         <div class="menu-item">
                                             <!--begin:Menu link-->
-                                            <a class="menu-link {{ Route::is('admin.journalists.index') ? 'active' : '' }}" href="{{ route('admin.journalists.index') }}">
+                                            <a class="menu-link {{ Route::is('admin.journalists.index') ? 'active' : '' }}"
+                                                href="{{ route('admin.journalists.index') }}">
                                                 <span class="menu-bullet">
                                                     <span class="bullet bullet-dot"></span>
                                                 </span>
@@ -675,10 +792,10 @@
                                             </a>
                                             <!--end:Menu link-->
                                         </div>
-                                         @endcan
+                                        <!--end:Menu item-->
                                     </div>
                                     <!--end:Menu sub-->
-                                </div>
+                                    </div>
                                 <!--end:Menu item-->
                                 @can('all-roles')
                                 <div data-kt-menu-trigger="click" class="menu-item menu-accordion">

@@ -8,6 +8,9 @@ use Illuminate\Validation\Rule;
 use App\Http\Controllers\Controller;
 use App\Models\Course;
 use App\Models\Event;
+use App\Models\Feature;
+use App\Models\Journalist;
+use App\Models\Research;
 use App\Models\Teacher;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
@@ -18,10 +21,14 @@ class AdminController extends Controller
 {
     public function index() {
         $user =  User::count();
+        $users =  User::count();
         $course =  Course::count();
         $teacher =  Teacher::count();
         $event =  Event::count();
-        return view('admin.index',compact('user','course','teacher','event'));
+        $research= Research::count();
+        $journalist = Journalist::count();
+        $feature = Feature::count();
+        return view('admin.index',compact('user','course','teacher','event','research','journalist','feature','users'));
 
     }
     public function profile()
