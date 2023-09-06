@@ -6,6 +6,10 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use App\Http\Controllers\Controller;
+use App\Models\Course;
+use App\Models\Event;
+use App\Models\Teacher;
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Gate;
 use Rawilk\Settings\Facades\Settings;
@@ -13,7 +17,11 @@ use Rawilk\Settings\Facades\Settings;
 class AdminController extends Controller
 {
     public function index() {
-        return view('admin.index');
+        $user =  User::count();
+        $course =  Course::count();
+        $teacher =  Teacher::count();
+        $event =  Event::count();
+        return view('admin.index',compact('user','course','teacher','event'));
 
     }
     public function profile()

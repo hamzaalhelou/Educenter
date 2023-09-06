@@ -6,6 +6,7 @@ use App\Models\Event;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use App\Notifications\EventNotification;
 use Illuminate\Support\Facades\Gate;
 use App\Notifications\NewUserNotification;
 use Illuminate\Support\Facades\Notification;
@@ -56,6 +57,9 @@ class EventController extends Controller
             'content' => $request->content
 
         ]);
+        $user = User::get();
+        $event= Event::latest()->first();
+        Notification::send($user, new EventNotification($event));
 
 
         return redirect()

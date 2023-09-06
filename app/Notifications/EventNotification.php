@@ -2,29 +2,22 @@
 
 namespace App\Notifications;
 
-use App\Models\User;
+use App\Models\Event;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
-class NewUserNotification extends Notification
+class EventNotification extends Notification
 {
     use Queueable;
-    protected $post_id;
-    protected $user_create;
-    protected $title;
-    protected $body;
-
+    protected $event;
     /**
      * Create a new notification instance.
      */
-    public function __construct($user_create,$title,$body,$post_id)
+    public function __construct(Event $event)
     {
-        $this->user_create = $user_create;
-        $this->title = $title;
-        $this->body = $body;
-        $this->post_id = $post_id;
+        $this->event = $event;
     }
 
     /**
@@ -43,9 +36,8 @@ class NewUserNotification extends Notification
     public function toMail(object $notifiable): MailMessage
     {
         return (new MailMessage)
-                    ->greeting('Hello')
                     ->line('The introduction to the notification.')
-                    ->action('Notification Action',route('site.home'))
+                    ->action('Notification Action', url('/'))
                     ->line('Thank you for using our application!');
     }
 
@@ -57,12 +49,10 @@ class NewUserNotification extends Notification
     public function toDatabase(object $notifiable): array
     {
         return [
-            'post_id'=>$this->post_id,
-            'user_create'=>$this->user_create,
-            'title'=>$this->title,
-            'body'=>$this->body,
-
-
+            'id'=>$this->event->id,
+            'title'=>'New Event',
+            'content'=>'A new event has been added',
+            'url'=>route('site.events')
         ];
     }
 }

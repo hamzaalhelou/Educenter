@@ -7,8 +7,8 @@ use App\Models\Teacher;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use App\Notifications\CourseNotification;
 use Illuminate\Support\Facades\Gate;
-use App\Notifications\NewUserNotification;
 use Illuminate\Support\Facades\Notification;
 
 class CourseController extends Controller
@@ -92,11 +92,9 @@ class CourseController extends Controller
 
 //
 //
-$id =$course->id;
-    $user_create = auth()->user()->name;
-    $title = 'New Course';
-    $body = 'A new course has been added';
-    Notification::send($id, new NewUserNotification($title, $id,$user_create,$body));
+    $user = User::get();
+    $course= Course::latest()->first();
+    Notification::send($user, new CourseNotification($course));
 
 
         return redirect()

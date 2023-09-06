@@ -117,7 +117,8 @@ return[
   'Post updated successfully'=>'Post updated successfully',
   'Post deleted successfully'=>'Post deleted successfully',
   'Alerts'=>'Alerts',
-  'Notifications'=>'Notifications'
+  'Notifications'=>'Notifications',
+  'Main'=>'Main',
 
 
 

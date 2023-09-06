@@ -117,6 +117,7 @@ return[
   'Post deleted successfully'=>'تم حذف الاشعار بنجاح',
   'Alerts'=>'التنبهات',
   'Notifications'=>'الاشعارات',
+  'Main'=>'الرئيسية',
 
 
 
