@@ -531,6 +531,7 @@
                             <div class="menu menu-column menu-rounded menu-sub-indention px-3"
                                 id="#kt_app_sidebar_menu" data-kt-menu="true" data-kt-menu-expand="false">
                                 <!--begin:Menu item-->
+                                @can('all-sliders')
                                 <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                                     <!--begin:Menu link-->
                                     <span class="menu-link">
@@ -568,7 +569,9 @@
                                     </div>
                                     <!--end:Menu sub-->
                                 </div>
+                                @endcan
                                 <!--begin:Menu item-->
+                                @can('all-features')
                                 <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                                     <!--begin:Menu link-->
                                     <span class="menu-link">
@@ -606,7 +609,9 @@
                                     </div>
                                     <!--end:Menu sub-->
                                 </div>
+                                @endcan
                                  <!--begin:Menu item-->
+                                 @can('all-courses')
                                  <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                                     <!--begin:Menu link-->
                                     <span class="menu-link">
@@ -644,7 +649,9 @@
                                     </div>
                                     <!--end:Menu sub-->
                                 </div>
+                                @endcan
                                   <!--begin:Menu item-->
+                                  @can('all-teachers')
                                   <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                                     <!--begin:Menu link-->
                                     <span class="menu-link">
@@ -682,7 +689,9 @@
                                     </div>
                                     <!--end:Menu sub-->
                                 </div>
+                                 @endcan
                                  <!--begin:Menu item-->
+                                 @can('all-events')
                                  <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                                     <!--begin:Menu link-->
                                     <span class="menu-link">
@@ -720,7 +729,9 @@
                                     </div>
                                     <!--end:Menu sub-->
                                 </div>
+                                @endcan
                                 <!--begin:Menu item-->
+                                @can('all-researchs')
                                 <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                                 <!--begin:Menu link-->
                                 <span class="menu-link">
@@ -758,7 +769,9 @@
                                 </div>
                                 <!--end:Menu sub-->
                                 </div>
+                                 @endcan
                                 <!--begin:Menu item-->
+                                @can('all-journalists')
                                 <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                                     <!--begin:Menu link-->
                                     <span class="menu-link">
@@ -796,6 +809,7 @@
                                     </div>
                                     <!--end:Menu sub-->
                                     </div>
+                                    @endcan
                                 <!--end:Menu item-->
                                 @can('all-roles')
                                 <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
