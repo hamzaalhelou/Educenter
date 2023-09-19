@@ -110,7 +110,7 @@ class ResearchController extends Controller
         return redirect()
         ->route('admin.research.index')
         ->with('msg',__('admin.research updated successfully'))
-        ->with('type', 'info');
+        ->with('type', 'success');
     }
 
     /**
@@ -123,6 +123,6 @@ class ResearchController extends Controller
         return redirect()
         ->route('admin.research.index')
         ->with('msg',__('admin.research deleted successfully'))
-        ->with('type', 'error');
+        ->with('type', 'success');
     }
 }

@@ -123,7 +123,7 @@ class EventController extends Controller
         return redirect()
         ->route('admin.events.index')
         ->with('msg',__('admin.Event updated successfully'))
-        ->with('type', 'info');
+        ->with('type', 'success');
     }
 
     /**
@@ -136,6 +136,6 @@ class EventController extends Controller
         return redirect()
         ->route('admin.events.index')
         ->with('msg',__('admin.Event deleted successfully'))
-        ->with('type', 'error');
+        ->with('type', 'success');
     }
 }

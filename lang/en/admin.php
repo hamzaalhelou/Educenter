@@ -119,7 +119,13 @@ return[
   'Alerts'=>'Alerts',
   'Notifications'=>'Notifications',
   'Main'=>'Main',
-
+  'Pending'=>'Pending',
+  'Users'=>'Users',
+  'All Users'=>'All Users',
+  'Edit'=>'Edit',
+  'View'=>'View',
+  'Delete'=>'Delete',
+  'View Slider'=>'View Slider'
 
 
 ];

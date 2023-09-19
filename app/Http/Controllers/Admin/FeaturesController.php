@@ -96,7 +96,7 @@ class FeaturesController extends Controller
         return redirect()
         ->route('admin.features.index')
         ->with('msg',__('admin.feature updated successfully'))
-        ->with('type', 'info');
+        ->with('type', 'success');
     }
 
     /**
@@ -110,6 +110,6 @@ class FeaturesController extends Controller
         return redirect()
         ->route('admin.features.index')
         ->with('msg',__('admin.feature deleted successfully'))
-        ->with('type', 'error');
+        ->with('type', 'success');
     }
 }

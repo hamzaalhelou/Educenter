@@ -118,7 +118,7 @@ class JournalistController extends Controller
         return redirect()
         ->route('admin.journalists.index')
         ->with('msg',__('admin.Journalist updated successfully'))
-        ->with('type', 'info');
+        ->with('type', 'success');
     }
 
     /**
@@ -131,6 +131,6 @@ class JournalistController extends Controller
         return redirect()
         ->route('admin.journalists.index')
         ->with('msg',__('admin.Journalist deleted successfully'))
-        ->with('type', 'error');
+        ->with('type', 'success');
     }
 }

@@ -86,6 +86,6 @@ class RoleController extends Controller
         return redirect()
         ->route('admin.roles.index')
         ->with('msg',__('admin.Role deleted successfully'))
-        ->with('type', 'error');
+        ->with('type', 'success');
     }
 }

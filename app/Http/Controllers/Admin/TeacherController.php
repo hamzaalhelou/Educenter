@@ -56,7 +56,7 @@ class TeacherController extends Controller
         ]);
 
 
-        
+
         return redirect()
         ->route('admin.teacher.index')
         ->with('msg',__('admin.teachers added successfully'))
@@ -123,7 +123,7 @@ class TeacherController extends Controller
         return redirect()
         ->route('admin.teacher.index')
         ->with('msg',__('admin.teacher updated successfully'))
-        ->with('type', 'info');
+        ->with('type', 'success');
     }
 
     /**
@@ -136,6 +136,6 @@ class TeacherController extends Controller
         return redirect()
         ->route('admin.teacher.index')
         ->with('msg',__('admin.teacher deleted successfully'))
-        ->with('type', 'error');
+        ->with('type', 'success');
     }
 }

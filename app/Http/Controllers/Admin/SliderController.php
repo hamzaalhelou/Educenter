@@ -60,7 +60,9 @@ class SliderController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $slider = Slider::findOrFail($id);
+
+        return view('admin.sliders.view', compact('slider'));
     }
 
     /**
@@ -108,7 +110,7 @@ class SliderController extends Controller
         return redirect()
         ->route('admin.sliders.index')
         ->with('msg',__('admin.Slider updated successfully'))
-        ->with('type', 'info');
+        ->with('type', 'success');
     }
 
     /**
@@ -121,6 +123,6 @@ class SliderController extends Controller
         return redirect()
         ->route('admin.sliders.index')
         ->with('msg',__('admin.Slider deleted successfully'))
-        ->with('type', 'error');
+        ->with('type', 'success');
     }
 }
