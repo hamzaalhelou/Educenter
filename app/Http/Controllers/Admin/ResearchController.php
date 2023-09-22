@@ -64,7 +64,9 @@ class ResearchController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $researchs = Research::findOrFail($id);
+
+        return view('admin.research.view', compact('researchs'));
     }
 
     /**

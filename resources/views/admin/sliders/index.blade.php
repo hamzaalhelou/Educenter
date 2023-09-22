@@ -25,7 +25,7 @@
     <tbody class="fw-semibold text-gray-600">
         <tr>
             <td>
-                <span class="fw-bold">{{ Str::limit($slider->title, 30) }}</span>
+                <span class="fw-bold">{{ $slider->title }}</span>
             </td>
             <td>
                 <span class="fw-bold">{{ Str::limit($slider->content, 30) }}</span>
@@ -72,7 +72,6 @@
                     </div>
                     <!--end::Menu-->
                 </td>
-
         </tr>
     </tbody>
     @endforeach
@@ -86,7 +85,8 @@
   @if (session('msg'))
   Swal.fire({
     icon: "{{ session('type') }}",
-    title: "{{ session('msg') }}"
+    title: "{{ session('msg') }}",
+    confirmButtonText: '{{ __('admin.OK') }}'
   })
   @endif
 </script>

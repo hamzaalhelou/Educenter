@@ -15,9 +15,9 @@
 @method('put')
 <div class="card-body border-top">
 <div class="row align-items-center mb-3 m-8">
-    <label class="col-md-1 mb-0 required"><b>{{ __('admin.Date') }}</b></label>
+    <label class="col-md-1 mb-0 text-gray-600 required"><b>{{ __('admin.Date') }}</b></label>
     <div class="col-md-6 ms-20" >
-        <input type="text" class="form-control @error('date') is-invalid @enderror" value="{{$journalist->date}}" name="date">
+        <input type="text" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0  @error('date') is-invalid @enderror" value="{{$journalist->date}}" name="date">
         @error('date')
         <small class="invalid-feedback">{{ $message }}</small>
         @enderror
@@ -25,9 +25,9 @@
     </div>
 
 <div class="row align-items-bottom mb-3 m-8">
-    <label class="col-md-1 mb-0 required "><b>{{ __('admin.Image') }}</b></label>
+    <label class="col-md-1 mb-0 text-gray-600 required "><b>{{ __('admin.Image') }}</b></label>
     <div class="col-md-6 ms-20" >
-        <input type="file" class="form-control @error('image') is-invalid @enderror" name="image">
+        <input type="file" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0  @error('image') is-invalid @enderror" name="image">
         @error('image')
             <small class="invalid-feedback">{{ $message }}</small>
         @enderror
@@ -35,27 +35,27 @@
     </div>
     </div>
 <div class="row align-items-center mb-3 m-8">
-    <label class="col-md-1 mb-0 required"><b>{{ __('admin.Writer') }}</b></label>
+    <label class="col-md-1 mb-0 text-gray-600 required"><b>{{ __('admin.Writer') }}</b></label>
     <div class="col-md-6 ms-20" >
-        <input type="text" placeholder="{{ __('admin.Writer') }}" class="form-control @error('writer') is-invalid @enderror" value="{{$journalist->writer}}" name="writer">
+        <input type="text" placeholder="{{ __('admin.Writer') }}" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0  @error('writer') is-invalid @enderror" value="{{$journalist->writer}}" name="writer">
         @error('writer')
         <small class="invalid-feedback">{{ $message }}</small>
         @enderror
     </div>
     </div>
 <div class="row align-items-center mb-3 m-8">
-    <label class="col-md-1 mb-0 required"><b>{{ __('admin.Title') }}</b></label>
+    <label class="col-md-1 mb-0 text-gray-600 required"><b>{{ __('admin.Title') }}</b></label>
     <div class="col-md-6 ms-20" >
-        <input type="text" placeholder="{{ __('admin.Title') }}" class="form-control @error('title') is-invalid @enderror" value="{{$journalist->title}}" name="title">
+        <input type="text" placeholder="{{ __('admin.Title') }}" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0  @error('title') is-invalid @enderror" value="{{$journalist->title}}" name="title">
         @error('title')
         <small class="invalid-feedback">{{ $message }}</small>
         @enderror
     </div>
     </div>
     <div class="row align-items-center mb-3 m-8">
-        <label class="col-md-1 mb-0 required" ><b>{{ __('admin.Content') }}</b></label>
+        <label class="col-md-1 mb-0 text-gray-600 required" ><b>{{ __('admin.Content') }}</b></label>
         <div class="col-md-6 ms-20" >
-            <textarea class="form-control @error('content') is-invalid @enderror" name="content" rows="5">{{ $journalist->content }}</textarea>
+            <textarea class="form-control form-control-lg form-control-solid mb-3 mb-lg-0  @error('content') is-invalid @enderror" name="content" rows="5">{{ $journalist->content }}</textarea>
             @error('content')
            <small class="invalid-feedback">{{ $message }}</small>
             @enderror

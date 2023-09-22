@@ -125,6 +125,13 @@ return[
   'Delete'=>'حذف',
   'View'=>'عرض',
   'View Slider'=>'عرض الاعلان',
+  'View Course'=>'عرض الدورة',
+  'View Event'=>'عرض الحدث',
+  'View Feature'=>'عرض الميزة',
+  'View Teacher'=>'عرض المعلم',
+  'View Journalist'=>'عرض الخبر',
+  'View Research'=>'عرض البحث',
+  'OK'=>'حسناً',
 
 
 

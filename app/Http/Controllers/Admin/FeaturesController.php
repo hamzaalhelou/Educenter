@@ -56,7 +56,9 @@ class FeaturesController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $feature = Feature::findOrFail($id);
+
+        return view('admin.features.view', compact('feature'));
     }
 
     /**

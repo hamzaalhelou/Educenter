@@ -16,9 +16,9 @@ __('admin.Account Overview'))
 @method('PUT')
 <div class="card-body border-top">
 <div class="row align-items-center mb-3 m-8">
-    <label class="col-md-1 mb-0 required"><b>{{ __('admin.Name') }}</b></label>
+    <label class="col-md-1 mb-0 text-gray-600 required"><b>{{ __('admin.Name') }}</b></label>
     <div class="col-md-6 ms-20 " >
-        <input type="text" class="form-control @error('name') is-invalid @enderror" value="{{ Auth::user()->name }}" name="name">
+        <input type="text" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0 @error('name') is-invalid @enderror" value="{{ Auth::user()->name }}" name="name">
         @error('name')
         <small class="invalid-feedback">{{ $message }}</small>
         @enderror
@@ -26,9 +26,9 @@ __('admin.Account Overview'))
     </div>
 
 <div class="row align-items-center mb-3 m-8">
-    <label class="col-md-1 mb-0 required"><b>{{ __('admin.Email') }}</b></label>
+    <label class="col-md-1 mb-0 text-gray-600 required"><b>{{ __('admin.Email') }}</b></label>
     <div class="col-md-6 ms-20 " >
-        <input type="email" class="form-control @error('email') is-invalid @enderror" value="{{ Auth::user()->email }}" name="email">
+        <input type="email" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0 @error('email') is-invalid @enderror" value="{{ Auth::user()->email }}" name="email">
         @error('email')
         <small class="invalid-feedback">{{ $message }}</small>
         @enderror

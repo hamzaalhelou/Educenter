@@ -15,18 +15,18 @@
 @method('put')
 <div class="card-body border-top">
 <div class="row align-items-center mb-3 m-8">
-    <label class="col-md-1 mb-0 required"><b>{{ __('admin.Icon') }}</b></label>
+    <label class="col-md-1 mb-0 text-gray-600 required"><b>{{ __('admin.Icon') }}</b></label>
     <div class="col-md-6 ms-20" >
-        <input type="text" placeholder="{{ __('admin.Icon') }}" class="form-control @error('icon') is-invalid @enderror" value="{{$feature->icon}}" name="icon">
+        <input type="text" placeholder="{{ __('admin.Icon') }}" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0 @error('icon') is-invalid @enderror" value="{{$feature->icon}}" name="icon">
         @error('icon')
         <small class="invalid-feedback">{{ $message }}</small>
         @enderror
     </div>
     </div>
 <div class="row align-items-center mb-3 m-8">
-    <label class="col-md-1 mb-0 required"><b>{{ __('admin.Title') }}</b></label>
+    <label class="col-md-1 mb-0 text-gray-600 required"><b>{{ __('admin.Title') }}</b></label>
     <div class="col-md-6 ms-20" >
-        <input type="text" placeholder="{{ __('admin.Title') }}" class="form-control @error('title') is-invalid @enderror" value="{{$feature->title}}" name="title">
+        <input type="text" placeholder="{{ __('admin.Title') }}" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0 @error('title') is-invalid @enderror" value="{{$feature->title}}" name="title">
         @error('title')
         <small class="invalid-feedback">{{ $message }}</small>
         @enderror
@@ -34,9 +34,9 @@
     </div>
 
     <div class="row align-items-center mb-3 m-8">
-        <label class="col-md-1 mb-0 required" ><b>{{ __('admin.Content') }}</b></label>
+        <label class="col-md-1 mb-0 text-gray-600 required" ><b>{{ __('admin.Content') }}</b></label>
         <div class="col-md-6 ms-20" >
-            <textarea placeholder="{{ __('admin.Content') }}" class="form-control @error('content') is-invalid @enderror"name="content" rows="5">{{ $feature->content }}</textarea>
+            <textarea placeholder="{{ __('admin.Content') }}" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0 @error('content') is-invalid @enderror"name="content" rows="5">{{ $feature->content }}</textarea>
             @error('content')
             <small class="invalid-feedback">{{ $message }}</small>
              @enderror

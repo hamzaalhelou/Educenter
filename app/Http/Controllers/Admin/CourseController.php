@@ -108,7 +108,10 @@ class CourseController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $teachers = Teacher::select('name', 'id')->get();
+        $course = Course::findOrFail($id);
+
+        return view('admin.courses.view', compact('teachers', 'course'));
     }
 
     /**

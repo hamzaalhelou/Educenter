@@ -14,9 +14,9 @@
 @csrf
 <div class="card-body border-top">
 <div class="row align-items-center mb-3 m-8">
-    <label class="col-md-1 mb-0 required"><b>{{ __('admin.Name') }}</b></label>
+    <label class="col-md-1 mb-0 text-gray-600 required"><b>{{ __('admin.Name') }}</b></label>
     <div class="col-md-6 ms-20" >
-        <input type="text" placeholder="{{ __('admin.Name') }}" class="form-control @error('name') is-invalid @enderror" name="name">
+        <input type="text" placeholder="{{ __('admin.Name') }}" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0 @error('name') is-invalid @enderror" name="name">
         @error('name')
         <small class="invalid-feedback">{{ $message }}</small>
         @enderror
@@ -24,54 +24,54 @@
     </div>
 
 <div class="row align-items-center mb-3 m-8">
-    <label class="col-md-1 mb-0 required"><b>{{ __('admin.Image') }}</b></label>
+    <label class="col-md-1 mb-0 text-gray-600 required"><b>{{ __('admin.Image') }}</b></label>
     <div class="col-md-6 ms-20" >
-        <input type="file" class="form-control @error('image') is-invalid @enderror" name="image">
+        <input type="file" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0 @error('image') is-invalid @enderror" name="image">
         @error('image')
         <small class="invalid-feedback">{{ $message }}</small>
         @enderror
     </div>
     </div>
 <div class="row align-items-center mb-3 m-8">
-    <label class="col-md-1 mb-0 required"><b>{{ __('admin.Position') }}</b></label>
+    <label class="col-md-1 mb-0 text-gray-600 required"><b>{{ __('admin.Position') }}</b></label>
     <div class="col-md-6 ms-20" >
-        <input type="text" placeholder="{{ __('admin.Position') }}" class="form-control @error('position') is-invalid @enderror" name="position">
+        <input type="text" placeholder="{{ __('admin.Position') }}" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0 @error('position') is-invalid @enderror" name="position">
         @error('position')
         <small class="invalid-feedback">{{ $message }}</small>
         @enderror
     </div>
     </div>
 <div class="row align-items-center mb-3 m-8">
-    <label class="col-md-1 mb-0 required"><b>{{ __('admin.Link Facebook') }}</b></label>
+    <label class="col-md-1 mb-0 text-gray-600 required"><b>{{ __('admin.Link Facebook') }}</b></label>
     <div class="col-md-6 ms-20" >
-        <input type="url" placeholder="{{ __('admin.Link Facebook') }}" class="form-control @error('fb_link') is-invalid @enderror" name="fb_link">
+        <input type="url" placeholder="{{ __('admin.Link Facebook') }}" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0 @error('fb_link') is-invalid @enderror" name="fb_link">
         @error('fb_link')
         <small class="invalid-feedback">{{ $message }}</small>
         @enderror
     </div>
     </div>
 <div class="row align-items-center mb-3 m-8">
-<label class="col-md-1 mb-0 required"><b>{{ __('admin.Link Instagram') }}</b></label>
+<label class="col-md-1 mb-0 text-gray-600 required"><b>{{ __('admin.Link Instagram') }}</b></label>
 <div class="col-md-6 ms-20" >
-    <input type="url" placeholder="{{ __('admin.Link Instagram') }}" class="form-control @error('in_link') is-invalid @enderror" name="in_link">
+    <input type="url" placeholder="{{ __('admin.Link Instagram') }}" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0 @error('in_link') is-invalid @enderror" name="in_link">
     @error('in_link')
     <small class="invalid-feedback">{{ $message }}</small>
      @enderror
 </div>
 </div>
 <div class="row align-items-center mb-3 m-8">
-    <label class="col-md-1 mb-0 required"><b>{{ __('admin.Link Linkedln') }}</b></label>
+    <label class="col-md-1 mb-0 text-gray-600 required"><b>{{ __('admin.Link Linkedln') }}</b></label>
     <div class="col-md-6 ms-20" >
-        <input type="url" placeholder="{{ __('admin.Link Linkedln') }}" class="form-control @error('ln_link') is-invalid @enderror" name="ln_link">
+        <input type="url" placeholder="{{ __('admin.Link Linkedln') }}" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0 @error('ln_link') is-invalid @enderror" name="ln_link">
         @error('ln_link')
        <small class="invalid-feedback">{{ $message }}</small>
         @enderror
     </div>
     </div>
 <div class="row align-items-center mb-3 m-8">
-    <label class="col-md-1 mb-0 required"><b>{{ __('admin.Link Gamil') }}</b></label>
+    <label class="col-md-1 mb-0 text-gray-600 required"><b>{{ __('admin.Link Gamil') }}</b></label>
     <div class="col-md-6 ms-20" >
-        <input type="url" placeholder="{{ __('admin.Link Gamil') }}" class="form-control @error('gm_link') is-invalid @enderror" name="gm_link">
+        <input type="url" placeholder="{{ __('admin.Link Gamil') }}" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0 @error('gm_link') is-invalid @enderror" name="gm_link">
         @error('gm_link')
         <small class="invalid-feedback">{{ $message }}</small>
          @enderror

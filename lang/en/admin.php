@@ -125,7 +125,14 @@ return[
   'Edit'=>'Edit',
   'View'=>'View',
   'Delete'=>'Delete',
-  'View Slider'=>'View Slider'
+  'View Slider'=>'View Slider',
+  'View Course'=>'View Course',
+  'View Event'=>'View Event',
+  'View Feature'=>'View Feature',
+  'View Teacher'=>'View Teacher',
+  'View Journalist'=>'View Journalist',
+  'View Research'=>'View Research',
+  'OK'=>'OK',
 
 
 ];

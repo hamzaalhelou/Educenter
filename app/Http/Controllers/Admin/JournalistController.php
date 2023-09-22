@@ -69,7 +69,9 @@ class JournalistController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $journalist = Journalist::findOrFail($id);
+
+        return view('admin.journalists.view', compact('journalist'));
     }
 
     /**

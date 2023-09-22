@@ -17,20 +17,20 @@ __('admin.Roles'))
 @csrf
 <div class="card-body border-top">
 <div class="row align-items-center mb-3 m-8">
-    <label class="col-md-1 mb-0 required"><b>{{ __('admin.Name') }}</b></label>
+    <label class="col-md-1 mb-0 text-gray-600 required"><b>{{ __('admin.Name') }}</b></label>
     <div class="col-md-6 ms-20" >
-        <input type="text" placeholder="{{ __('admin.Name') }}" class="form-control @error('name') is-invalid @enderror " name="name">
+        <input type="text" placeholder="{{ __('admin.Name') }}" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0 @error('name') is-invalid @enderror " name="name">
         @error('name')
             <small class="invalid-feedback">{{ $message }}</small>
         @enderror
     </div>
     </div>
     <div class="row align-items-center mb-3 m-8">
-        <h4 class="fw-bold m-0 required ">Permission</h4>
+        <h4 class="fw-bold m-0 text-gray-600 required ">Permission</h4>
 
-<label class="form-check form-check-custom form-check-solid align-items-start mb-1 m-4"><input class="form-check-input me-3"  type="checkbox" id="check_all" /><b> All</b></label><br>
+<label class="form-check form-check-custom form-check-solid align-items-start text-gray-600 mb-1 m-4"><input class="form-check-input me-3"  type="checkbox" id="check_all" /><b> All</b></label><br>
 @foreach ($permissions as $p)
-<label class="form-check form-check-custom form-check-solid align-items-start mb-1 m-4"> <input class="form-check-input me-3" type="checkbox" value="{{ $p->id }}" name="permissions[]"><b>{{ $p->name }}</b></label> <br>
+<label class="form-check form-check-custom form-check-solid align-items-start text-gray-600 mb-1 m-4"> <input class="form-check-input me-3" type="checkbox" value="{{ $p->id }}" name="permissions[]"><b>{{ $p->name }}</b></label> <br>
 @endforeach
 </div>
     <div class="card-footer d-flex justify-content-end py-6 px-9 m-5">
